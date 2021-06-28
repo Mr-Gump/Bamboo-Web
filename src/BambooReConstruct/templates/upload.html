@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Bamboo Web|上传历史数据</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static '/ico/favicon.ico' %}">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="{% static '/css/theme.min.css' %}">
+
+    <link rel="stylesheet" href="{% static '/vendor/icon-set/style.css' %}">
+    <link rel="stylesheet" href="{% static '/vendor/ion-rangeslider/css/ion.rangeSlider.css' %}">
+    <link rel="stylesheet" href="{% static '/vendor/chart.js/dist/Chart.min.css' %}">
+</head>
+
+<body>
+<header>
+    <div class="container-fluid row border-bottom">
+        <nav class="navbar navbar-expand-md navbar-light ">
+            <div class="avatar avatar-lg avatar-4by3 mr-2">
+                <img class="avatar-img" src="{% static '/svg/brands/guideline.svg' %}" alt="Image Description">
+            </div>
+            <a href="#" class="navbar-brand">Bamboo Web</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="menu" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="http://bamboo.xjtu.edu.cn/" target="_blank"
+                                            class="nav-link">Bamboo</a></li>
+                    <li class="nav-item"><a href="http://necp.xjtu.edu.cn/" target="_blank" class="nav-link">NECP</a>
+                    </li>
+                    <li class="nav-item"><a href="http://www.xjtu.edu.cn/" target="_blank" class="nav-link">XJTU</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="bg-light m-5">
+            <ul class="step step-md">
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-primary text-light">1</span>
+                        <div class="step-content">
+                            <h6 class="step-title">上传历史数据</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">2</span>
+                        <div class="step-content">
+                            <h6 class="step-title">添加预测数据</h6>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">3</span>
+                        <div class="step-content">
+                            <h6 class="step-title">程序运行</h6>
+                        </div>
+                    </div>
+                </li>
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">4</span>
+                        <div class="step-content">
+                            <h6 class="step-title">查看结果和导出数据</h6>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header>
+
+<main>
+    <div class="container ">
+        <div class="row">
+
+            <div id="blank" class="col-sm-2"></div>
+            <div id="left" class="col-sm-4">
+                <div>
+                    <!-- End Row -->
+                    <div class="row align-items-sm-center mb-4">
+                        <div class="col-sm mb-3 mb-sm-0">
+                            <div class="d-flex align-items-center">
+                                <span class="h1 mb-0">燃耗深度</span>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-auto">
+                            <!-- Legend Indicators -->
+                            <div class="row font-size-sm">
+                                <div class="col-auto">
+                                    <span class="legend-indicator bg-primary"></span> AO
+                                </div>
+                            </div>
+                            <!-- End Legend Indicators -->
+                        </div>
+
+
+                    </div>
+                    <!-- End Row -->
+
+                    <!-- Bar Chart -->
+                    <div class="chartjs-custom" style="height: 18rem;">
+                        <canvas id="updatingLineChart"
+                                data-hs-chartjs-options='{
+            "type": "line",
+            "data": {
+               "labels": [],
+               "datasets": [{
+                "backgroundColor": ["rgba(55, 125, 255, .5)", "rgba(255, 255, 255, .2)"],
+                "borderColor": "#377dff",
+                "borderWidth": 2,
+                "pointRadius": 0,
+                "hoverBorderColor": "#377dff",
+                "pointBackgroundColor": "#377dff",
+                "pointBorderColor": "#fff",
+                "pointHoverRadius": 0
+              },
+              {
+                "backgroundColor": ["rgba(0, 201, 219, .5)", "rgba(255, 255, 255, .2)"],
+                "borderColor": "#00c9db",
+                "borderWidth": 2,
+                "pointRadius": 0,
+                "hoverBorderColor": "#00c9db",
+                "pointBackgroundColor": "#00c9db",
+                "pointBorderColor": "#fff",
+                "pointHoverRadius": 0
+              }]
+            },
+            "options": {
+              "gradientPosition": {"y1": 200},
+               "scales": {
+                  "yAxes": [{
+                    "gridLines": {
+                      "color": "#e7eaf3",
+                      "drawBorder": false,
+                      "zeroLineColor": "#e7eaf3"
+                    },
+                    "ticks": {
+                      "min": 1000,
+                      "max": 1800,
+                      "stepSize": 200,
+                      "fontColor": "#97a4af",
+                      "fontFamily": "Open Sans, sans-serif",
+                      "padding": 10,
+                      "postfix": "MWd/tU"
+                    }
+                  }],
+                  "xAxes": [{
+                    "gridLines": {
+                      "display": false,
+                      "drawBorder": false
+                    },
+                    "ticks": {
+                      "fontSize": 12,
+                      "fontColor": "#97a4af",
+                      "fontFamily": "Open Sans, sans-serif",
+                      "padding": 5
+                    }
+                  }]
+              },
+              "tooltips": {
+                "hasIndicator": true,
+                "mode": "index",
+                "intersect": false,
+                "lineMode": true,
+                "yearStamp": false,
+                "lineWithLineColor": "rgba(19, 33, 68, 0.075)"
+              },
+              "hover": {
+                "mode": "nearest",
+                "intersect": true
+              }
+            }
+          }'>
+                        </canvas>
+                    </div>
+                    <!-- End Bar Chart -->
+                </div>
+
+                <div>
+                    <!-- Chart Half -->
+                    <div class="chartjs-doughnut-custom" style="height: 12rem;">
+                        <canvas id="process" class="js-chartjs-doughnut-half-dynamic"
+                                data-hs-chartjs-options='{
+                          "type": "doughnut",
+                          "data": {
+                            "labels": ["已完成", "未完成"],
+                            "datasets": [{
+                              "data": [0,100 ],
+                              "backgroundColor": ["#377dff", "rgba(55, 125, 255, 0.35)"],
+                              "borderWidth": 4,
+                              "hoverBorderColor": "#ffffff"
+                            }]
+                          }
+                        }'></canvas>
+
+                        <div class="chartjs-doughnut-custom-stat">
+                            <span class="h1" id="process_num">0%</span>
+                        </div>
+                    </div>
+                    <!-- End Chart Half -->
+                </div>
+            </div>
+
+
+            <div id="main" class="col-sm-8 mt-5">
+                <div>
+                    <a class="d-block text-center" href="#" data-container="body" data-toggle="popover"
+                       data-placement="top" title="温馨提示"
+                       data-content="您需要上传包括序号，小时数，功率百分比，冷却剂入口温度，控制棒棒位的以xlsx为后缀的Excel文件，如有疑问我们强烈建议您下载示例文件。">
+                        <h3 class="display-5 mb-10">请上传反应堆运行历史数据（每天取一个点）<i class="tio-help-outlined"></i></h3>
+                    </a>
+                    <form id="addFile" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <label class="custom-file-boxed " for="customFileInputBoxedEg">
+                            <span id="customFileBoxedEg">请点击上传xlsx文档</span>
+                            <small class="d-block text-muted">文件最大100M</small>
+
+                            <input id="customFileInputBoxedEg" name="upload" type="file"
+                                   class="js-file-attach custom-file-boxed-input" data-hs-file-attach-options='{
+                               "textTarget": "#customFileBoxedEg",
+                               "allowTypes":[".xlsx"],
+                               "typeErrorMessage":"当前仅支持xlsx格式文件!"
+                             }'>
+                        </label>
+                        <div class="row mt-5">
+                            <div class="col-12 text-center">
+                                <button class="btn btn-lg btn-primary" type="submit" id="check">
+                                    点击校验
+                                    <i class="tio-checkmark-circle-outlined"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class="row my-8">
+                    <div class="col-sm-3">
+                        <!-- Toggle -->
+                        <div class="hs-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-primary btn-lg" href="javascript:;"
+                               data-hs-unfold-options='{
+                                  "target": "#activitySidebar",
+                                  "type": "css-animation",
+                                  "animationIn": "fadeInRight",
+                                  "animationOut": "fadeOutRight",
+                                  "hasOverlay": true,
+                                  "smartPositionOff": true
+                                 }' id="show">
+                                查看历史数据 <i class="tio-search"></i>
+
+                            </a>
+
+                        </div>
+                        <!-- End Toggle -->
+
+                        <!-- Sidebar -->
+                        <div id="activitySidebar"
+                             class="hs-unfold-content sidebar sidebar-bordered sidebar-box-shadow">
+                            <div class="card card-lg sidebar-card sidebar-footer-fixed">
+                                <div class="card-header">
+                                    <h4 class="card-header-title">历史数据</h4>
+
+                                    <!-- Toggle Button -->
+                                    <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-ghost-dark ml-2"
+                                       href="javascript:;" data-hs-unfold-options='{
+                                      "target": "#activitySidebar",
+                                      "type": "css-animation",
+                                      "animationIn": "fadeInRight",
+                                      "animationOut": "fadeOutRight",
+                                      "hasOverlay": true,
+                                      "smartPositionOff": true
+                                     }'>
+                                        <i class="tio-clear tio-lg"></i>
+                                    </a>
+                                    <!-- End Toggle Button -->
+                                </div>
+
+                                <!-- Body -->
+                                <div class="card-body sidebar-body sidebar-scrollbar">
+                                    <!-- Table -->
+                                    <table class="table">
+                                        <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col">序号</th>
+                                            <th scope="col">数据点数量</th>
+                                            <th scope="col">数据起始时间(天)</th>
+                                            <th scope="col">数据结束时间(天)</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for file in files %}
+                                            <tr id="{{ file.1 }}">
+                                                <th scope="row">{{ file.0 }}</th>
+                                                <td>{{ file.2 }}</td>
+                                                <td>{{ file.3 }}</td>
+                                                <td>{{ file.4 }}</td>
+                                            </tr>
+                                        {% endfor %}
+
+
+                                        </tbody>
+                                    </table>
+                                    <!-- End Table -->
+                                </div>
+                                <!-- End Body -->
+
+                            </div>
+                        </div>
+                        <!-- End Sidebar -->
+                    </div>
+                    <div class="col-sm-3">
+                        <!-- Button trigger modal -->
+                        {#                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"#}
+                        {#                                data-target="#staticBackdrop" id="reuse_button" disabled=true>#}
+                        {#                            选择历史数据 <i class="tio-format-points"></i>#}
+                        {##}
+                        {#                        </button>#}
+                        <!-- Unfold -->
+                        <div class="hs-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-primary dropdown-toggle btn-lg" href="javascript:;"
+                               data-hs-unfold-options='{
+       "target": "#dropdownHover",
+       "type": "css-animation",
+       "event": "hover"
+     }'> 选择历史数据 <i class="tio-format-points"></i></a>
+
+                            <div id="dropdownHover"
+                                 class="hs-unfold-content dropdown-unfold dropdown-menu pre-scrollable">
+                                {% for file in files %}
+                                    <a class="dropdown-item active" max="{{ file.2 }}" href="#"
+                                       id="{{ file.1 }}">{{ file.0 }}. 第{{ file.3 }}天--第{{ file.4 }}天</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!-- End Unfold -->
+                        <!-- End Button trigger modal -->
+
+
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-primary btn-lg" id="download">
+                            下载示例文件
+                            <i class="tio-file-text-outlined"></i>
+                        </button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-primary btn-lg" id="start" disabled=true>
+                            开始计算
+                            <i class="tio-eject-circle-outlined"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="my-10" id="select">
+                </div>
+            </div>
+            <div id="right" class="col-md-2"></div>
+
+
+        </div>
+
+    </div>
+
+
+</main>
+
+<!-- JS Global Compulsory -->
+<script src="{% static '/vendor/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static '/vendor/jquery-migrate/dist/jquery-migrate.min.js' %}"></script>
+<script src="{% static '/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static '/vendor/hs-file-attach/dist/hs-file-attach.min.js' %}"></script>
+<script src="{% static '/vendor/hs-unfold/dist/hs-unfold.min.js' %}"></script>
+<script src="{% static '/vendor/ion-rangeslider/js/ion.rangeSlider.min.js' %}"></script>
+<!-- JS Front -->
+<script src="{% static '/js/theme.min.js' %}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"
+        integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn"
+        crossorigin="anonymous"></script>
+<script src="{% static '/vendor/chart.js/dist/Chart.min.js' %}"></script>
+
+
+<script>
+    var type = 1;
+    var from_uid;
+    var updatingChartDatasets;
+    var updatingLineChart;
+    var halfChart;
+    var uid;
+    var status_code;
+    var msg;
+    var start = $("#start");
+    const select = $("#select");
+    const check = $("#check");
+
+    $(".dropdown-item").on('click', function () {
+        select.html("<h3 class=\"display-4\">选择复用时间点序号</h3><input class=\"js-ion-range-slider\" type=\"text\" data-hs-ion-range-slider-options=\'{\"extra_classes\": \"range-slider-custom range-slider-indicator\",\"hide_from_to\": false,\"prefix\": \"点序号：\",\"min\": 0,\"max\": " + $(this).attr("max") + ",\"from\": " + $(this).attr("max") + "}\'>")
+        $('.js-ion-range-slider').each(function () {
+            $.HSCore.components.HSIonRangeSlider.init($(this));
+        });
+        start.attr("disabled", false)
+        start.html('确定复用<i class=\"tio-checkmark-circle-outlined\"></i>')
+        type = 2;
+        from_uid = $(this).attr("id")
+    })
+
+    $("#download").on('click', function () {
+            window.location.href = '{% url 'example' %}'
+        }
+    )
+    check.on('click', function () {
+            check.attr("disabled", true);
+            check.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>正在校验...');
+            if ($("#customFileInputBoxedEg").val() == "") {
+                alert("您还没有添加文件");
+                check.attr("disabled", false);
+
+            } else {
+                $("#addFile").ajaxSubmit({
+                    type: 'post',
+                    url: "{% url 'file_upload' %}", //变量
+                    error: function () {//请求失败处理函数
+                        alert("上传失败");
+                        check.attr("disabled", false);
+                        check.html("点击校验<i class=\"tio-checkmark-circle-outlined\"></i>");
+                    },
+                    success: function (data) { //请求成功后处理函数。
+                        uid = data["uid"]
+                        msg = data["msg"]
+                        status_code = data["status_code"]
+                        if (status_code == 200) {
+                            check.html("校验成功<i class=\"tio-checkmark-circle\"></i>");
+                            start.attr("disabled", false)
+                            type = 1;
+                        } else {
+                            alert(msg)
+                            check.attr("disabled", false);
+                            check.html("点击校验<i class=\"tio-checkmark-circle-outlined\"></i>");
+                        }
+                    }
+
+
+                })
+            }
+        }
+    )
+
+
+    start.on('click', function () {
+        console.log(type)
+        if (type == 2) {
+
+            $.get("/data/recover/" + from_uid + "?step=" + $(".js-ion-range-slider").val(), function (data, status) {
+
+                uid = JSON.parse(JSON.stringify(data))["uid"]
+
+                setTimeout(function () {
+                    start.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>正在为您跳转...');
+                }, 1000)
+                setTimeout(function () {
+                    window.location.href = "/page/add-param/" + uid
+                }, 1000)
+
+            });
+            return
+        }
+        start.attr("disabled", true);
+        start.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>正在连接...');
+        var DataSocket = new WebSocket(
+            'ws://' + window.location.host +
+            '/ws/data_stream/' + uid + '/');
+
+        DataSocket.addEventListener('open', function () {
+            start.html("连接成功<i class=\"tio-plug-outlined\"></i>");
+            DataSocket.send(JSON.stringify({
+                'message': 'ready',
+                'uid': uid
+            }))
+            $("#blank").hide()
+            $("#left").show()
+            $("#right").hide()
+            start.attr("disabled", true);
+            start.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>正在计算...');
+        });
+
+        DataSocket.onmessage = function (e) {
+            var data = JSON.parse(e.data);
+            var message = data['message'];
+            var datas = data["data"];
+            var uid = data["uid"];
+            if (message == 'point_num') {
+                point_num = datas;
+                //设置图像参数
+                var labels = []
+                for (var i = 1; i <= point_num; i++) {
+                    labels.push("Step" + i)
+                }
+                updatingLineChart.data.labels = labels;
+                updatingLineChart.update();
+                DataSocket.send(JSON.stringify({
+                    'message': 'start',
+                    'uid': uid
+                }))
+            }
+
+            if (message == "caculating") {
+                //设置图像点
+                halfChart.data.datasets[0].data[0] = parseInt(datas[0] / point_num * 100)
+                halfChart.data.datasets[0].data[1] = 100 - halfChart.data.datasets[0].data[0]
+                halfChart.update()
+                $("#process_num").text(parseInt(datas[0] / point_num * 100) + "%")
+                updatingChartDatasets.push(datas[3])
+                updatingLineChart.data.datasets[0].data = updatingChartDatasets;
+                updatingLineChart.update()
+            }
+
+            if (message == "finished") {
+                start.html("计算完成<i class=\"tio-checkmark-circle-outlined\"></i>");
+
+                setTimeout(function () {
+                    start.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>正在为您跳转...');
+                }, 1000)
+                setTimeout(function () {
+                    window.location.href = "/page/add-param/" + uid
+                }, 1000)
+                DataSocket.close()
+
+            }
+        };
+
+        DataSocket.onclose = function (e) {
+            console.error('Socket closed unexpectedly');
+        };
+    })
+
+    $(document).on('ready', function () {
+        $("#left").hide()
+    });
+</script>
+
+<script>
+    $(document).on('ready', function () {
+        // INITIALIZATION OF CUSTOM FILE
+        // =======================================================
+        $('.js-file-attach').each(function () {
+            var customFile = new HSFileAttach($(this)).init();
+        });
+    });
+
+    $(document).on('ready', function () {
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+    });
+
+    $(document).on('ready', function () {
+        // INITIALIZATION OF ION RANGE SLIDER
+        // =======================================================
+        $('.js-ion-range-slider').each(function () {
+            $.HSCore.components.HSIonRangeSlider.init($(this));
+        });
+    });
+
+    // Dismiss Popover on next click
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    })
+
+    $(document).on('ready', function () {
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        $('.js-chart').each(function () {
+            $.HSCore.components.HSChartJS.init($(this));
+        });
+    });
+
+    $(document).on('ready', function () {
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        $.HSCore.components.HSChartJS.init($('.js-chartjs-doughnut-half'), {
+            options: {
+                tooltips: {
+                    postfix: "%"
+                },
+                cutoutPercentage: 85,
+                rotation: 1 * Math.PI,
+                circumference: 1 * Math.PI
+            }
+        });
+    });
+
+    $(document).on('ready', function () {
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        halfChart = $.HSCore.components.HSChartJS.init($('.js-chartjs-doughnut-half-dynamic'), {
+            options: {
+                tooltips: {
+                    postfix: "%"
+                },
+                cutoutPercentage: 85,
+                rotation: 1 * Math.PI,
+                circumference: 1 * Math.PI
+            }
+        });
+    })
+
+    $(document).on('ready', function () {
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        updatingChartDatasets = [];
+
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        updatingLineChart = $.HSCore.components.HSChartJS.init($('#updatingLineChart'), {
+            data: {
+                labels: ["Step1", "Step2", "Step3", "Step4", "Step5", "Step6", "Step7", "Step8",],
+                datasets: [
+                    {
+                        data: updatingChartDatasets
+                    }
+                ]
+            }
+        });
+        updatingLineChart.update();
+    });
+</script>
+<footer class="text-center text-muted py-4 bg-dark">
+    Copyright @Gump <a href="http://necp.xjtu.edu.cn/" target="_blank">XJTU-NECP</a>
+</footer>
+
+</body>
+
+</html>

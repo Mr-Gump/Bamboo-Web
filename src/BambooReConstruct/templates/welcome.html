@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Bamboo Web|欢迎访问</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static '/ico/favicon.ico' %}">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="{% static '/css/theme.min.css' %}">
+
+    <style>
+        .myheader {
+            background: url({% static '/img/1920x400/img1.jpg' %});
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="alert alert-info text-center mb-0 rounded-0 alert-dismissible fade show">
+            欢迎使用Bamboo Web！
+            <button class="close" data-dismiss="alert">&times;</button>
+        </div>
+
+        <div class="container-fluid row">
+            <nav class="navbar navbar-expand-md navbar-light ">
+                <div class="avatar avatar-lg avatar-4by3 mr-2">
+                    <img class="avatar-img" src="{% static '/svg/brands/guideline.svg' %}" alt="Image Description">
+                </div>
+                <a href="#" class="navbar-brand">Bamboo Web</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="menu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="http://bamboo.xjtu.edu.cn/" target="_blank" class="nav-link">Bamboo</a></li>
+                        <li class="nav-item"><a href="http://necp.xjtu.edu.cn/" target="_blank" class="nav-link">NECP</a></li>
+                        <li class="nav-item"><a href="http://www.xjtu.edu.cn/" target="_blank" class="nav-link">XJTU</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="text-center text-dark py-10 bg-info myheader col-12">
+            <h1 class="display-1 ">Bamboo Web</h1>
+            <a type="button" class="btn btn-primary btn-lg m-5" href="{% url 'upload' %}">开始使用</a>
+            <a type="button" class="btn btn-primary btn-lg m-5" href="#introduction">关于我们</a>
+
+        </div>
+    </header>
+    <main>
+
+        <div class=" bg-soft-info py-5">
+            <div class="row">
+                <div class="col-sm-4 pl-10">
+
+                    <div class="card text-center" style="max-width: 20rem;">
+                        <img class="card-img-top" src="{% static '/svg/r3.svg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">简单易用</h3>
+                            <p class="card-text">您只需要点击几个按钮即可实现复杂计算</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 pl-10">
+
+                    <div class="card text-center" style="max-width: 20rem;">
+                        <img class="card-img-top" src="{% static '/svg/r2.svg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">直观展示</h3>
+                            <p class="card-text">使用流行的可视化技术为您直观展示计算得到的数据</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 pl-10">
+
+                    <div class="card text-center" style="max-width: 20rem;">
+                        <img class="card-img-top" src="{% static '/svg/r1.svg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">便于导出</h3>
+                            <p class="card-text">为您提供多文件格式的数据和图表</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card" id="introduction">
+            <embed class="card-img card-img-top" src="{% static '/svg/photo.svg' %}" alt="Card image cap"/>
+            <div class="card-img-overlay">
+                <h4 class="card-title display-1">NECP团队</h4>
+                <p class="card-text display-4 text-dark">
+                    NECP-Bamboo是西安交通大学核工程计算物理实验室（NECP）经过几十年的努力自主研发的压水堆堆芯燃料管理计算程序系统，包括栅格计算程序Bamboo-Lattice、堆芯三维稳态分析程序Bamboo-Core以及堆芯三维瞬态分析程序Bamboo-Transient。该程序系统理论模型先进、功能齐全、适用范围广，经过了充分的验证与确认。
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-center text-muted py-4 bg-dark">
+        Copyright @Gump <a href="http://necp.xjtu.edu.cn/" target="_blank">XJTU-NECP</a>
+    </footer>
+    <!-- JS Global Compulsory -->
+    <script src="{% static '/vendor/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static '/vendor/jquery-migrate/dist/jquery-migrate.min.js' %}"></script>
+    <script src="{% static '/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- JS Front -->
+    <script>
+        $("a").click(function () {
+
+            $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 20 + "px" }, 500);
+
+            return false;
+
+        });
+    </script>
+
+</body>
+
+</html>

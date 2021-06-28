@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d56fd69a-fce0-4d0b-a201-4a9f43cdfe73" name="Bamboo">
+        <fileTransfer rootFolder="/home/necp/BambooReConstruct" accessType="SFTP" host="39.97.124.178" port="2222" sshConfigId="80eea73b-cb74-4759-886f-8584233683c7" sshConfig="necp@39.97.124.178:2222 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Bamboo Web|添加参数</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static '/ico/favicon.ico' %}">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/vendor/icon-set/style.css' %}">
+    <link rel="stylesheet" href="{% static '/vendor/ion-rangeslider/css/ion.rangeSlider.css' %}">
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="{% static '/css/theme.min.css' %}">
+</head>
+
+<body>
+
+<header>
+    <div class="container-fluid row border-bottom">
+        <nav class="navbar navbar-expand-md navbar-light ">
+            <div class="avatar avatar-lg avatar-4by3 mr-2">
+                <img class="avatar-img" src="{% static '/svg/brands/guideline.svg' %}" alt="Image Description">
+            </div>
+            <a href="#" class="navbar-brand">Bamboo Web</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="menu" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="http://bamboo.xjtu.edu.cn/" target="_blank"
+                                            class="nav-link">Bamboo</a></li>
+                    <li class="nav-item"><a href="http://necp.xjtu.edu.cn/" target="_blank"
+                                            class="nav-link">NECP</a>
+                    </li>
+                    <li class="nav-item"><a href="http://www.xjtu.edu.cn/" target="_blank" class="nav-link">XJTU</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="bg-light m-5">
+            <ul class="step step-md">
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">1</span>
+                        <div class="step-content">
+                            <h6 class="step-title">上传历史数据</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-primary text-light">2</span>
+                        <div class="step-content">
+                            <h6 class="step-title">添加预测数据</h6>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">3</span>
+                        <div class="step-content">
+                            <h6 class="step-title">程序运行</h6>
+                        </div>
+                    </div>
+                </li>
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">4</span>
+                        <div class="step-content">
+                            <h6 class="step-title">查看结果和导出数据</h6>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 ml-5">
+                <button type="button" class="btn btn-primary btn-lg m-2" id="add">
+                    <i class="tio-add-circle-outlined"></i>添加一条数据
+                </button>
+                <button type="button" class="btn btn-warning btn-lg m-2" id="remove-one">
+                    <i class="tio-delete"></i>删除最后数据点
+                </button>
+                <button type="button" class="btn btn-danger btn-lg m-2" id="remove-all">
+                    <i class="tio-delete-outlined"></i>清空全部数据点
+                </button>
+            </div>
+            <div class="col-sm-2 ml-10">
+                <button type="button" class="btn btn-primary btn-lg" id="add-batch" data-toggle="modal"
+                        data-target="#staticBackdrop">
+                    <i class="tio-add-circle"></i> 批量添加
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">批量添加数据点</h5>
+                                <button type="button" class="btn btn-xs btn-icon btn-ghost-secondary"
+                                        data-dismiss="modal" aria-label="Close">
+                                    <i class="tio-clear tio-lg"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group mt-5">
+                                        <label class="input-label" for="exampleFormControlInput1">您要添加几个数据点?
+                                            (我们将默认复用最后数据点的数据内容)</label>
+                                        <input type="text" id="exampleFormControlInput1" class="form-control"
+                                               placeholder="3">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                        id="add-batch-submit">确定
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Modal -->
+            </div>
+            <div class="col-sm-11 border pre-scrollable my-5 mx-5" style="height: 600px">
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-header-title">数据预测点</h4>
+                    </div>
+
+                    <!-- Table -->
+                    <div class="table-responsive">
+                        <table class="js-editable-table table table-lg table-borderless table-thead-bordered table-nowrap table-align-middle">
+                            <thead class="thead-light">
+                            <tr>
+                                <th>序号</th>
+                                <th>燃耗深度( /MWd/tU )</th>
+                                <th>功率系数( 0-1 )</th>
+                                <th>冷却剂入口温度( ℃ )</th>
+                                <th>控制棒位( 步 )</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+
+                            <tbody id="datas">
+                            <tr class="data-item" id="1">
+                                <td id="index">1</td>
+
+                                <td data-field="XXPO"></td>
+                                <td data-field="PXPO"></td>
+                                <td data-field="TCOOLIN"></td>
+                                <td id="modal">
+                                    <!-- Button Trigger Modal -->
+                                    <button type="button" class="btn btn-soft-primary" data-toggle="modal"
+                                            data-target="#modal1" id="trigger">
+                                        点击设置控制棒位
+                                    </button>
+                                    <!-- End Button Trigger Modal -->
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <!-- Header -->
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">棒位设置</h5>
+                                                    <button type="button"
+                                                            class="btn btn-icon btn-sm btn-ghost-secondary"
+                                                            data-dismiss="modal" aria-label="Close">
+                                                        <i class="tio-clear tio-lg" aria-hidden="true"></i>
+                                                    </button>
+                                                </div>
+                                                <!-- End Header -->
+
+                                                <!-- Body -->
+                                                <div class="modal-body">
+                                                    <!-- Range Slider -->
+                                                    <div class="mb-5">
+                                                        <h4 class="display-5">控制棒1</h4>
+                                                        <input id="rod-1" class="js-ion-range-slider" type="text"
+                                                               data-hs-ion-range-slider-options='{
+                                                             "extra_classes": "range-slider-custom range-slider-indicator",
+                                                             "hide_from_to": false,
+                                                             "min": 0,
+                                                             "max": 9,
+                                                             "from": 4
+                                                           }'>
+                                                    </div>
+
+                                                    <div class="mb-5">
+                                                        <h4 class="display-5">控制棒2</h4>
+                                                        <input id="rod-2" class="js-ion-range-slider" type="text"
+                                                               data-hs-ion-range-slider-options='{
+                                                             "extra_classes": "range-slider-custom range-slider-indicator",
+                                                             "hide_from_to": false,
+                                                             "min": 0,
+                                                             "max": 9,
+                                                             "from": 4
+                                                           }'>
+                                                    </div>
+                                                    <div class="mb-5">
+                                                        <h4 class="display-5">控制棒3</h4>
+                                                        <input id="rod-3" class="js-ion-range-slider" type="text"
+                                                               data-hs-ion-range-slider-options='{
+                                                             "extra_classes": "range-slider-custom range-slider-indicator",
+                                                             "hide_from_to": false,
+                                                             "min": 0,
+                                                             "max": 9,
+                                                             "from": 4
+                                                           }'>
+                                                    </div>
+
+                                                    <!-- End Range Slider -->
+                                                </div>
+                                                <!-- End Body -->
+
+                                                <!-- Footer -->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary"
+                                                            data-dismiss="modal">保存设置
+                                                    </button>
+                                                </div>
+                                                <!-- End Footer -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Modal -->
+                                </td>
+                                <td>
+                                    <a class="js-edit btn btn-sm btn-white" href="javascript:;">
+                                        <i class="js-edit-icon tio-edit"></i> 编辑
+                                    </a>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- End Table -->
+                </div>
+                <!-- End Card -->
+            </div>
+            <div class="col-sm-10"></div>
+            <div class="col-sm-2 mb-5 pl-5">
+                <button id="submit" type="button" class="btn btn-primary btn-lg">
+                    <i class="tio-checkmark-circle-outlined"></i> 提交
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- JS Global Compulsory -->
+<script src="{% static '/vendor/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static '/vendor/jquery-migrate/dist/jquery-migrate.min.js' %}"></script>
+<script src="{% static '/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static '/vendor/table-edits/build/table-edits.min.js' %}"></script>
+<script src="{% static '/vendor/ion-rangeslider/js/ion.rangeSlider.min.js' %}"></script>
+<!-- JS Front -->
+<script src="{% static '/js/theme.min.js' %}"></script>
+<footer class="text-center text-muted py-4 bg-dark">
+    Copyright @Gump <a href="http://necp.xjtu.edu.cn/" target="_blank">XJTU-NECP</a>
+</footer>
+
+<script>
+    {#data = [{"XXPO": 24.9921, "PXPO": 1, "TCOOLIN": 565, "PCRO": [121.504, 121.504, 121.504]},#}
+    {#    {"XXPO": 24.9921, "PXPO": 1, "TCOOLIN": 565, "PCRO": [121.504, 121.504, 121.504]},#}
+    {#    {"XXPO": 24.9921, "PXPO": 1, "TCOOLIN": 565, "PCRO": [121.504, 121.504, 121.504]}]#}
+    var count = 1;
+    var XXPO = 0;
+    var PXPO = 0;
+    var TCOOLIN = 565;
+    var PCRO = [0, 0, 0]
+    var Data = [];
+
+    function update() {
+        var last_data = $(".data-item").slice(-1)
+        XXPO = last_data.find('[data-field="XXPO"]').text()
+        PXPO = last_data.find('[data-field="PXPO"]').text()
+        TCOOLIN = last_data.find('[data-field="TCOOLIN"]').text()
+        PCRO[0] = last_data.find('#rod-1').val()
+        PCRO[1] = last_data.find('#rod-2').val()
+        PCRO[2] = last_data.find('#rod-3').val()
+        count = parseInt(last_data.attr("id"))
+
+    }
+
+    function get_data() {
+        var result = ["ok", -1]
+        $("#datas").find('.data-item').each(function () {
+            var row = $(this)
+            var XXPO = row.find('[data-field="XXPO"]').text()
+            var PXPO = row.find('[data-field="PXPO"]').text()
+            var TCOOLIN = row.find('[data-field="TCOOLIN"]').text()
+            if (XXPO == "" || PXPO == "" || TCOOLIN == "") {
+                result = ["error", $(this).attr("id")]
+            }
+            Data.push({
+                "XXPO": XXPO,
+                "PXPO": PXPO,
+                "TCOOLIN": TCOOLIN,
+                "PCRO": [row.find('#rod-1').val(), row.find('#rod-2').val(), row.find('#rod-3').val()]
+            })
+
+        });
+        return result
+    }
+
+    function addData(n) {
+        update()
+        for (var i = 0; i < n; i++) {
+            var data = $(".data-item").slice(-1).clone()
+            count = count + 1
+            data.attr("id", count)
+            data.children("#index").text(count)
+            data.find("#trigger").attr("data-target", "#modal" + count)
+            data.find(".modal").attr("id", "modal" + count)
+            data.find("#rod-1").val(PCRO[0])
+            var opt1 = JSON.parse(data.find("#rod-1").attr("data-hs-ion-range-slider-options"))
+            opt1["from"] = PCRO[0]
+            data.find("#rod-1").attr("data-hs-ion-range-slider-options", JSON.stringify(opt1))
+            data.find("#rod-2").val(PCRO[1])
+            var opt2 = JSON.parse(data.find("#rod-2").attr("data-hs-ion-range-slider-options"))
+            opt2["from"] = PCRO[1]
+            data.find("#rod-2").attr("data-hs-ion-range-slider-options", JSON.stringify(opt2))
+            data.find("#rod-3").val(PCRO[2])
+            var opt3 = JSON.parse(data.find("#rod-3").attr("data-hs-ion-range-slider-options"))
+            opt3["from"] = PCRO[2]
+            data.find("#rod-3").attr("data-hs-ion-range-slider-options", JSON.stringify(opt3))
+
+
+            $("#datas").append(data)
+
+            data.find('span').each(function () {
+                $(this).remove()
+            });
+
+            data.find('.js-ion-range-slider').each(function () {
+                $.HSCore.components.HSIonRangeSlider.init($(this));
+                $(this).addClass("irs-hidden-input")
+            });
+
+
+            $('.js-editable-table tbody tr').editable({
+                keyboard: true,
+                dblclick: true,
+                button: true,
+                buttonSelector: '.js-edit',
+                maintainWidth: true,
+                edit: function (values) {
+                    $('.js-edit .js-edit-icon', this).removeClass('tio-edit').addClass('tio-done');
+                    $(this).find('td[data-field] input').addClass('form-control form-control-sm');
+                },
+                save: function (values) {
+                    $('.js-edit .js-edit-icon', this).removeClass('tio-done').addClass('tio-edit');
+                },
+                cancel: function (values) {
+                    $('.js-edit .js-edit-icon', this).removeClass('tio-done').addClass('tio-edit');
+                }
+            });
+        }
+
+    }
+
+
+    $("#add-batch-submit").on("click", function () {
+        var point_num = $("#exampleFormControlInput1").val()
+        if (point_num <= 0) {
+            alert("请输入一个大于0的数!")
+            return
+        }
+        addData(point_num)
+    })
+
+    $("#add").on('click', function () {
+        addData(1)
+
+    })
+
+    $("#remove-one").on('click', function () {
+        if (count == 1)
+        {
+            alert("请至少保留一条数据!")
+            return
+        }
+        $("#datas").find("#"+count).remove()
+        update()
+    })
+
+    $("#remove-all").on('click', function () {
+        $("#datas").find("#1").nextAll().each(function () {
+            $(this).remove()
+        })
+    })
+
+    $("#submit").on("click", function () {
+        var result = get_data()
+        console.log(Data)
+
+        if (result[0] == "error") {
+            alert("第" + result[1] + "行有数据缺失!")
+        } else {
+            $.ajaxSetup({contentType: "application/json; charset=utf-8"});
+
+            $.post("/data/add_param/" + "{{ uid }}/", JSON.stringify(Data),
+                function (data) {
+                    var uid = data["uid"]
+                    $("#submit").attr("disabled", true)
+                    setTimeout(function () {
+                        $("#submit").html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>提交成功,正在为您跳转...');
+                    }, 1000)
+                    setTimeout(function () {
+                        window.location.href = "/page/calculate/" + uid
+                    }, 1000)
+                });
+        }
+    })
+
+</script>
+
+<script>
+    $(document).on('ready', function () {
+        // INITIALIZATION OF EDITABLE TABLE
+        // =======================================================
+        $('.js-editable-table tbody tr').editable({
+            keyboard: true,
+            dblclick: true,
+            button: true,
+            buttonSelector: '.js-edit',
+            maintainWidth: true,
+            edit: function (values) {
+                $('.js-edit .js-edit-icon', this).removeClass('tio-edit').addClass('tio-done');
+                $(this).find('td[data-field] input').addClass('form-control form-control-sm');
+            },
+            save: function (values) {
+                $('.js-edit .js-edit-icon', this).removeClass('tio-done').addClass('tio-edit');
+            },
+            cancel: function (values) {
+                $('.js-edit .js-edit-icon', this).removeClass('tio-done').addClass('tio-edit');
+            }
+        });
+    });
+
+    $(document).on('ready', function () {
+        // INITIALIZATION OF ION RANGE SLIDER
+        // =======================================================
+        $('.js-ion-range-slider').each(function () {
+            $.HSCore.components.HSIonRangeSlider.init($(this));
+        });
+    });
+</script>
+
+
+</body>
+</html>

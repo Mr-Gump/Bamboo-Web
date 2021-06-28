@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Bamboo Web|计算</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static '/ico/favicon.ico' %}">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="{% static '/vendor/chart.js/dist/Chart.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/theme.min.css' %}">
+</head>
+
+<body>
+<header>
+    <div class="container-fluid row border-bottom">
+        <nav class="navbar navbar-expand-md navbar-light ">
+            <div class="avatar avatar-lg avatar-4by3 mr-2">
+                <img class="avatar-img" src="{% static '/svg/brands/guideline.svg' %}" alt="Image Description">
+            </div>
+            <a href="#" class="navbar-brand">Bamboo Web</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="menu" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="http://bamboo.xjtu.edu.cn/" target="_blank"
+                                            class="nav-link">Bamboo</a></li>
+                    <li class="nav-item"><a href="http://necp.xjtu.edu.cn/" target="_blank" class="nav-link">NECP</a>
+                    </li>
+                    <li class="nav-item"><a href="http://www.xjtu.edu.cn/" target="_blank" class="nav-link">XJTU</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="bg-light m-5">
+            <ul class="step step-md">
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">1</span>
+                        <div class="step-content">
+                            <h6 class="step-title">上传历史数据</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">2</span>
+                        <div class="step-content">
+                            <h6 class="step-title">添加预测数据</h6>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-primary text-light">3</span>
+                        <div class="step-content">
+                            <h6 class="step-title">程序运行</h6>
+                        </div>
+                    </div>
+                </li>
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">4</span>
+                        <div class="step-content">
+                            <h6 class="step-title">查看结果和导出数据</h6>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header>
+
+
+<main>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8">
+                <!-- Pie Chart -->
+                <div class="chartjs-custom mb-3 mb-sm-5" style="height: 14rem;">
+                    <canvas id="updatingDoughnutChart"
+                            data-hs-chartjs-options='{
+            "type": "doughnut",
+            "data": {
+              "labels": ["已完成", "未完成"],
+              "datasets": [{
+                "backgroundColor": ["#377dff", "#00c9db"],
+                "borderWidth": 5,
+                "hoverBorderColor": "#fff"
+              }]
+            },
+            "options": {
+              "cutoutPercentage": 80,
+              "tooltips": {
+                "postfix": "%",
+                "hasIndicator": true,
+                "mode": "index",
+                "intersect": false
+              },
+              "hover": {
+                "mode": "nearest",
+                "intersect": true
+              }
+            }
+          }'></canvas>
+                </div>
+                <!-- End Pie Chart -->
+
+                <!-- Legend Indicators -->
+                <div class="row justify-content-center">
+                    <div class="col-auto mb-3 mb-sm-0">
+                        <span class="card-title h4 " id="finished">4</span>
+                        <span class="legend-indicator bg-primary"></span> 已完成步数
+                    </div>
+
+                    <div class="col-auto mb-3 mb-sm-0">
+                        <span class="card-title h4 " id="rest">5</span>
+                        <span class="legend-indicator bg-info"></span> 剩余步数
+                    </div>
+
+                    <div class="col-auto">
+                        <span class="card-title h4" id="all">9</span>
+                        <span class="legend-indicator"></span> 总共步数
+                    </div>
+                </div>
+                <!-- End Legend Indicators -->
+            </div>
+            <div class="col-sm-4 align-self-center ">
+                <button type="button" class="btn btn-primary btn-lg" id="next_step" disabled=true>
+                    下一步
+                </button>
+            </div>
+            <div class="col-sm-6">
+                <div class="row align-items-sm-center mb-4">
+                    <div class="col-sm mb-3 mb-sm-0">
+                        <div class="d-flex align-items-center">
+                            <span class="h1 mb-0">燃耗深度</span>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Row -->
+
+                <!-- Bar Chart -->
+                <div class="chartjs-custom" style="height: 18rem;">
+                    <canvas id="updatingLineChart1"
+                            data-hs-chartjs-options='{
+            "type": "line",
+            "data": {
+               "labels": [],
+               "datasets": [{
+                "backgroundColor": ["rgba(55, 125, 255, .5)", "rgba(255, 255, 255, .2)"],
+                "borderColor": "#377dff",
+                "borderWidth": 2,
+                "pointRadius": 0,
+                "hoverBorderColor": "#377dff",
+                "pointBackgroundColor": "#377dff",
+                "pointBorderColor": "#fff",
+                "pointHoverRadius": 0
+              }]
+            },
+            "options": {
+              "gradientPosition": {"y1": 200},
+               "scales": {
+                  "yAxes": [{
+                    "gridLines": {
+                      "color": "#e7eaf3",
+                      "drawBorder": false,
+                      "zeroLineColor": "#e7eaf3"
+                    },
+                    "ticks": {
+                      "min": 1000,
+                      "max": 1800,
+                      "stepSize": 200,
+                      "fontColor": "#97a4af",
+                      "fontFamily": "Open Sans, sans-serif",
+                      "padding": 10,
+                      "postfix": "MWd/tU"
+                    }
+                  }],
+                  "xAxes": [{
+                    "gridLines": {
+                      "display": false,
+                      "drawBorder": false
+                    },
+                    "ticks": {
+                      "fontSize": 12,
+                      "fontColor": "#97a4af",
+                      "fontFamily": "Open Sans, sans-serif",
+                      "padding": 5
+                    }
+                  }]
+              },
+              "tooltips": {
+                "yearStamp": false,
+                "hasIndicator": true,
+                "mode": "index",
+                "intersect": false,
+                "lineMode": true,
+                "lineWithLineColor": "rgba(19, 33, 68, 0.075)"
+              },
+              "hover": {
+                "mode": "nearest",
+                "intersect": true
+              }
+            }
+          }'>
+                    </canvas>
+                </div>
+                <!-- End Bar Chart -->
+            </div>
+            <div class="col-sm-6">
+                <div class="row align-items-sm-center mb-4">
+                    <div class="col-sm mb-3 mb-sm-0">
+                        <div class="d-flex align-items-center">
+                            <span class="h1 mb-0">硼浓度</span>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Row -->
+
+                <!-- Bar Chart -->
+                <div class="chartjs-custom" style="height: 18rem;">
+                    <canvas id="updatingLineChart2"
+                            data-hs-chartjs-options='{
+            "type": "line",
+            "data": {
+               "labels": [],
+               "datasets": [
+              {
+                "backgroundColor": ["rgba(0, 201, 219, .5)", "rgba(255, 255, 255, .2)"],
+                "borderColor": "#00c9db",
+                "borderWidth": 2,
+                "pointRadius": 0,
+                "hoverBorderColor": "#00c9db",
+                "pointBackgroundColor": "#00c9db",
+                "pointBorderColor": "#fff",
+                "pointHoverRadius": 0
+              }]
+            },
+            "options": {
+              "gradientPosition": {"y1": 200},
+               "scales": {
+                  "yAxes": [{
+                    "gridLines": {
+                      "color": "#e7eaf3",
+                      "drawBorder": false,
+                      "zeroLineColor": "#e7eaf3"
+                    },
+                    "ticks": {
+                      "min": -0.045,
+                      "max": -0.032,
+                      "stepSize": 0.002,
+                      "fontColor": "#97a4af",
+                      "fontFamily": "Open Sans, sans-serif",
+                      "padding": 10,
+                      "postfix": "ppm"
+                    }
+                  }],
+                  "xAxes": [{
+                    "gridLines": {
+                      "display": false,
+                      "drawBorder": false
+                    },
+                    "ticks": {
+                      "fontSize": 12,
+                      "fontColor": "#97a4af",
+                      "fontFamily": "Open Sans, sans-serif",
+                      "padding": 5
+                    }
+                  }]
+              },
+              "tooltips": {
+                "yearStamp": false,
+
+                "hasIndicator": true,
+                "mode": "index",
+                "intersect": false,
+                "lineMode": true,
+                "lineWithLineColor": "rgba(19, 33, 68, 0.075)"
+              },
+              "hover": {
+                "mode": "nearest",
+                "intersect": true
+              }
+            }
+          }'>
+                    </canvas>
+                </div>
+                <!-- End Bar Chart -->
+            </div>
+        </div>
+
+
+    </div>
+</main>
+<footer>
+
+</footer>
+
+<!-- JS Global Compulsory -->
+<script src="{% static '/vendor/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static '/vendor/jquery-migrate/dist/jquery-migrate.min.js' %}"></script>
+<script src="{% static '/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static '/vendor/chart.js/dist/Chart.min.js' %}"></script>
+<!-- JS Front -->
+<script src="{% static '/js/theme.min.js' %}"></script>
+
+<script>
+    var updatingChartDatasets1;
+    var updatingChartDatasets2;
+    var updatingLineChart1;
+    var updatingLineChart2;
+    var updatingDoughnutChart;
+</script>
+
+<script>
+    $(document).on('ready', function () {
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        $('.js-chart').each(function () {
+            $.HSCore.components.HSChartJS.init($(this));
+        });
+    });
+
+    $(document).on('ready', function () {
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        updatingDoughnutChart = $.HSCore.components.HSChartJS.init($('#updatingDoughnutChart'));
+
+        // Datasets for chart, can be loaded from AJAX request
+        var updatingDoughnutChartDatasets = [
+            [
+                [100, 0]
+            ]
+        ]
+
+        // Set datasets for chart when page is loaded
+        updatingDoughnutChart.data.datasets.forEach(function (dataset, key) {
+            dataset.data = updatingDoughnutChartDatasets[0][key];
+        });
+        updatingDoughnutChart.update();
+
+        //开场动画
+        setTimeout(function () {
+            var updatingDoughnutChartDatasets = [
+                [
+                    [0, 100]
+                ]
+            ]
+
+            // Set datasets for chart when page is loaded
+            updatingDoughnutChart.data.datasets.forEach(function (dataset, key) {
+                dataset.data = updatingDoughnutChartDatasets[0][key];
+            });
+            updatingDoughnutChart.update()
+        }, 1000)
+
+    });
+</script>
+
+<script>
+    $(document).on('ready', function () {
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        updatingChartDatasets1 = []
+
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        updatingLineChart1 = $.HSCore.components.HSChartJS.init($('#updatingLineChart1'), {
+            data: {
+                labels: ["Step1", "Step2", "Step3", "Step4", "Step5", "Step6", "Step7", "Step8",],
+
+                datasets: [
+                    {
+                        data: updatingChartDatasets1
+                    }
+                ]
+            }
+        });
+
+        // Call when tab is clicked
+        $('[data-toggle="chart"]').click(function (e) {
+            let keyDataset = $(e.currentTarget).attr('data-datasets')
+
+            // Update datasets for chart
+            updatingLineChart1.data.datasets.forEach(function (dataset, key) {
+                dataset.data = updatingChartDatasets[keyDataset][key];
+            });
+            updatingLineChart.update();
+        })
+    });
+</script>
+
+<script>
+    $(document).on('ready', function () {
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        updatingChartDatasets2 = []
+
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        updatingLineChart2 = $.HSCore.components.HSChartJS.init($('#updatingLineChart2'), {
+            data: {
+                labels: ["Step1", "Step2", "Step3", "Step4", "Step5", "Step6", "Step7", "Step8",],
+
+                datasets: [
+                    {
+                        data: updatingChartDatasets2
+                    }
+                ]
+            }
+        });
+
+        // Call when tab is clicked
+        $('[data-toggle="chart"]').click(function (e) {
+            let keyDataset = $(e.currentTarget).attr('data-datasets')
+
+            // Update datasets for chart
+            updatingLineChart2.data.datasets.forEach(function (dataset, key) {
+                dataset.data = updatingChartDatasets[keyDataset][key];
+            });
+            updatingLineChart.update();
+        })
+    });
+</script>
+
+<script>
+    $(document).on('ready', function () {
+        const nextStep = $("#next_step")
+        uid = '{{ uid }}'
+
+        var DataSocket = new WebSocket(
+            'ws://' + window.location.host +
+            '/ws/data_stream/' + uid + '/');
+
+        DataSocket.addEventListener('open', function () {
+            nextStep.html("连接成功<i class=\"tio-plug-outlined\"></i>");
+            DataSocket.send(JSON.stringify({
+                'message': 'ready',
+                'uid': uid
+            }))
+
+            nextStep.attr("disabled", true);
+            nextStep.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>正在进行计算...');
+        });
+
+        DataSocket.onmessage = function (e) {
+            var data = JSON.parse(e.data);
+            var message = data['message'];
+            var datas = data["data"];
+            if (message == 'point_num') {
+                point_num = datas;
+                //设置图像参数
+                var labels = []
+                for (var i = 1; i <= point_num; i++) {
+                    labels.push("Step" + i)
+                }
+                $("#all").text(point_num)
+                $("#rest").text(point_num)
+                $("#finished").text("0")
+
+                updatingLineChart1.data.labels = labels;
+                updatingLineChart2.data.labels = labels;
+                updatingLineChart1.update();
+                updatingLineChart2.update();
+                DataSocket.send(JSON.stringify({
+                    'message': 'start',
+                    'uid': uid
+                }))
+            }
+
+            if (message == "caculating") {
+                //设置图像点
+                updatingDoughnutChart.data.datasets[0].data[0] = parseInt(datas[0] / point_num * 100)
+                updatingDoughnutChart.data.datasets[0].data[1] = 100 - updatingDoughnutChart.data.datasets[0].data[0]
+                updatingDoughnutChart.update()
+                $("#rest").text(point_num - datas[0])
+                $("#finished").text(datas[0])
+
+
+                updatingChartDatasets1.push(datas[3])
+                updatingLineChart1.data.datasets[0].data = updatingChartDatasets1;
+                updatingLineChart1.update()
+                updatingChartDatasets2.push(datas[4])
+                updatingLineChart2.data.datasets[0].data = updatingChartDatasets2;
+                updatingLineChart2.update()
+            }
+
+            if (message == "finished") {
+                nextStep.html("计算完成<i class=\"tio-checkmark-circle-outlined\"></i>");
+
+                setTimeout(function () {
+                    nextStep.html("下一步");
+                    nextStep.attr("disabled", false)
+                }, 1000)
+
+                nextStep.on("click", function () {
+                    window.location.href = "/page/result/" + uid + '?point_num=' + point_num
+                })
+
+                DataSocket.close()
+            }
+        };
+
+        DataSocket.onclose = function (e) {
+            console.error('Socket closed unexpectedly');
+        };
+    })
+
+</script>
+<footer class="text-center text-muted py-4 bg-dark">
+    Copyright @Gump <a href="http://necp.xjtu.edu.cn/" target="_blank">XJTU-NECP</a>
+</footer>
+
+</body>
+</html>

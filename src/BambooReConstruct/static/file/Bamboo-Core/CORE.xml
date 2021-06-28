@@ -1,0 +1,348 @@
+<?xml version="1.0" ?>
+<input>
+<path>
+<LILAC>./LILAC</LILAC>
+</path>
+<MatDef>
+<NM>9</NM>
+<MTAB>3*1 6*-1</MTAB>
+<IsLink>0</IsLink>
+<IsMicrodep>0</IsMicrodep>
+</MatDef>
+<GeoDef>
+<IWANT>1</IWANT>
+<IF2X2>1</IF2X2>
+<NPST>17</NPST>
+<DXA>21.504</DXA>
+<HCORE>100.0</HCORE>
+</GeoDef>
+<NumAssembly>
+<NAXL>7</NAXL>
+<NAYL>7</NAYL>
+<NAX>7</NAX>
+<NAY>7</NAY>
+<NMX>7</NMX>
+<NMY>7</NMY>
+<NMZ>7</NMZ>
+<CLEN>4</CLEN>
+<FLABEL NAME="0000 A001 A002 A003 0000"/>
+<FLABEL NAME="A004 B001 B002 B003 A005"/>
+<FLABEL NAME="A006 B004 A007 B005 A008"/>
+<FLABEL NAME="A009 B006 B007 B008 A010"/>
+<FLABEL NAME="0000 A011 A012 A013 0000"/>
+</NumAssembly>
+<Ref>
+<NumRef>1 1 1 </NumRef>
+<BC>0 0 0 0 0 0 </BC>
+</Ref>
+<NODELENGTH>
+<HX>7*21.504</HX>
+<HY>7*21.504</HY>
+<HZ>21.504,20.0,20.0,20.0,20.0,20.0,21.504</HZ>
+<LAX>7*1</LAX>
+<LAY>7*1</LAY>
+<LRX>7*1</LRX>
+<LRY>7*1</LRY>
+<LRZ>7*1</LRZ>
+</NODELENGTH>
+<REC>
+<IREC>0</IREC>
+<IMEG>0</IMEG>
+<IDET>0</IDET>
+<NPFX>119</NPFX>
+<NPFY>119</NPFY>
+<NPFZ>7</NPFZ>
+<HPX>119*1.2649411765</HPX>
+<HPY>119*1.2649411765</HPY>
+<HPZ>21.504,20.0,20.0,20.0,20.0,20.0,21.504</HPZ>
+<NPMX>119</NPMX>
+<NPMY>119</NPMY>
+<NPMZ>7</NPMZ>
+<LPMX>119*1</LPMX>
+<LPMY>119*1</LPMY>
+<LPMZ>7*1</LPMZ>
+<DETCON>
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
+</DETCON>
+</REC>
+<BURNUP>
+<GUESS>-1.2E-4</GUESS>
+<NXP>9</NXP>
+<XPO>0</XPO>
+<FPTH>106.0</FPTH>
+<BURN/>
+<XEDAYS>0</XEDAYS>
+<XXPO>
+0.0
+150.0
+350.0
+500.0
+1000.0
+1000.0
+1000.0
+1000.0
+1000.0
+</XXPO>
+<FPDD>9*3
+9*3</FPDD>
+<PXPO>
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+</PXPO>
+<CBORO>9*1400</CBORO>
+</BURNUP>
+<CONTROLROD>
+<IRCUS>4</IRCUS>
+<IMOD>3</IMOD>
+<NCB>3</NCB>
+<KCR>
+0 0 0 0 0 0 0
+0 0 3 0 3 0 0
+0 2 0 2 0 2 0
+0 0 2 1 2 0 0
+0 2 0 2 0 2 0
+0 0 3 0 3 0 0
+0 0 0 0 0 0 0
+</KCR>
+<NSCH>2</NSCH>
+<PCR>
+21.504, 121.504
+21.504, 121.504
+21.504, 121.504
+</PCR>
+<PCRO>
+1, 121.504, 121.504, 121.504
+2, 121.504, 121.504, 121.504
+3, 121.504, 121.504, 121.504
+4, 121.504, 121.504, 121.504
+5, 121.504, 121.504, 121.504
+6, 121.504, 121.504, 121.504
+7, 121.504, 121.504, 121.504
+8, 121.504, 121.504, 121.504
+9, 121.504, 121.504, 121.504
+</PCRO>
+<NSTEP>100</NSTEP>
+<NPASS>5</NPASS>
+<SECR>1 2 3</SECR>
+<NOTCH>
+1 0 0 0
+2 50 0 0
+3 100 50 0
+4 100 100 50
+5 100 100 100
+</NOTCH>
+<NPASS2>5</NPASS2>
+<SECR2>1 2 3</SECR2>
+<NOTCH2>
+1 0 0 0
+2 50 0 0
+3 100 50 0
+4 100 100 50
+5 100 100 100
+</NOTCH2>
+</CONTROLROD>
+<MatArrange>
+<MATER>
+  4   4   4   4   4   4   4 
+  4   4   4   4   4   4   4 
+  4   4   4   4   4   4   4 
+  4   4   4   4   4   4   4 
+  4   4   4   4   4   4   4 
+  4   4   4   4   4   4   4 
+  4   4   4   4   4   4   4 
+  0   9   7   6   7   9   0 
+  9   8   2   2   2   8   9 
+  7   2   1   2   1   2   7 
+  6   2   2   2   2   2   6 
+  7   2   1   2   1   2   7 
+  9   8   2   2   2   8   9 
+  0   9   7   6   7   9   0 
+  0   9   7   6   7   9   0 
+  9   8   2   2   2   8   9 
+  7   2   1   2   1   2   7 
+  6   2   2   2   2   2   6 
+  7   2   1   2   1   2   7 
+  9   8   2   2   2   8   9 
+  0   9   7   6   7   9   0 
+  0   9   7   6   7   9   0 
+  9   8   2   2   2   8   9 
+  7   2   1   2   1   2   7 
+  6   2   2   2   2   2   6 
+  7   2   1   2   1   2   7 
+  9   8   2   2   2   8   9 
+  0   9   7   6   7   9   0 
+  0   9   7   6   7   9   0 
+  9   8   2   2   2   8   9 
+  7   2   1   2   1   2   7 
+  6   2   2   2   2   2   6 
+  7   2   1   2   1   2   7 
+  9   8   2   2   2   8   9 
+  0   9   7   6   7   9   0 
+  0   9   7   6   7   9   0 
+  9   8   2   2   2   8   9 
+  7   2   1   2   1   2   7 
+  6   2   2   2   2   2   6 
+  7   2   1   2   1   2   7 
+  9   8   2   2   2   8   9 
+  0   9   7   6   7   9   0 
+  5   5   5   5   5   5   5 
+  5   5   5   5   5   5   5 
+  5   5   5   5   5   5   5 
+  5   5   5   5   5   5   5 
+  5   5   5   5   5   5   5 
+  5   5   5   5   5   5   5 
+  5   5   5   5   5   5   5 
+</MATER>
+<MATOR>
+  0   1   2   2   2   1   0 
+  1   2   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  1   3   1   1   1   4   1 
+  0   1   4   4   4   1   0 
+  0   1   2   2   2   1   0 
+  1   2   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  1   3   1   1   1   4   1 
+  0   1   4   4   4   1   0 
+  0   1   2   2   2   1   0 
+  1   2   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  1   3   1   1   1   4   1 
+  0   1   4   4   4   1   0 
+  0   1   2   2   2   1   0 
+  1   2   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  1   3   1   1   1   4   1 
+  0   1   4   4   4   1   0 
+  0   1   2   2   2   1   0 
+  1   2   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  1   3   1   1   1   4   1 
+  0   1   4   4   4   1   0 
+  0   1   2   2   2   1   0 
+  1   2   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  1   3   1   1   1   4   1 
+  0   1   4   4   4   1   0 
+  0   1   2   2   2   1   0 
+  1   2   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  3   1   1   1   1   1   1 
+  1   3   1   1   1   4   1 
+  0   1   4   4   4   1   0 
+</MATOR>
+</MatArrange>
+<MatToLib>
+<NLIB>
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+</NLIB>
+<NMINPUT/>
+</MatToLib>
+<OTset>
+<RENTA>2.92615E-5 2.10657E-5 3.62737E-6 0.0</RENTA>
+<MMAX>1000,5,100,5,4,2,0,1,1</MMAX>
+<ERR>1.0E-5 1.0E-4 1.0E-1 1.0E-2</ERR>
+<EX>1.0E-5 1.0E-5</EX>
+<NEX>2*20</NEX>
+<FAC>0.5 0.5 0.5</FAC>
+<CRITTYPE>1</CRITTYPE>
+<TUM>3*2.7280368735 6*0.0</TUM>
+<TCal>0 0 0 0 0 0 0</TCal>
+</OTset>
+<Print>
+<PRINT>1 1 1 1 1 0</PRINT>
+</Print>
+<THERMAL>
+<GAMMA>2.6</GAMMA>
+<IHEAT>2</IHEAT>
+<SEGTFU>0 280 10</SEGTFU>
+<NPELLET>10</NPELLET>
+<NCLAD>3</NCLAD>
+<COOLTYPE>2</COOLTYPE>
+<NCHTYPE>1</NCHTYPE>
+<TCOOLIN>9*565</TCOOLIN>
+<FLOW>
+  0.00   0.00   0.00   0.00   0.00   0.00   0.00 
+  0.00   0.00  39.68  39.68  39.68   0.00   0.00 
+  0.00  39.68  39.68  39.68  39.68  39.68   0.00 
+  0.00  39.68  39.68  39.68  39.68  39.68   0.00 
+  0.00  39.68  39.68  39.68  39.68  39.68   0.00 
+  0.00   0.00  39.68  39.68  39.68   0.00   0.00 
+  0.00   0.00   0.00   0.00   0.00   0.00   0.00 
+</FLOW>
+</THERMAL>
+<ThermalPass>
+<CHTYPE>1</CHTYPE>
+<CLADTYPE>4</CLADTYPE>
+<GAPTYPE>5</GAPTYPE>
+<FUELTYPE>4</FUELTYPE>
+<NPIN>289</NPIN>
+<NFPIN>264</NFPIN>
+<PITCH>1.26</PITCH>
+<ROD>0.475</ROD>
+<GAP>0.0085</GAP>
+<CLAD>0.057</CLAD>
+<CHANNEL>
+  0   0   0   0   0   0   0 
+  0   0   1   1   1   0   0 
+  0   1   1   1   1   1   0 
+  0   1   1   1   1   1   0 
+  0   1   1   1   1   1   0 
+  0   0   1   1   1   0   0 
+  0   0   0   0   0   0   0 
+</CHANNEL>
+</ThermalPass>
+<KINETIC>
+<NTXP></NTXP>
+<FV>1</FV>
+<NKP>0</NKP>
+<PKP></PKP>
+</KINETIC>
+<REACTIVITY>
+<NREP></NREP>
+<NRP>0</NRP>
+<PRP></PRP>
+<CDT></CDT>
+<CMT></CMT>
+<CBC></CBC>
+</REACTIVITY>
+<CRODWORTH>
+<NCRP></NCRP>
+<NCP>0</NCP>
+<PCP></PCP>
+</CRODWORTH>
+</input>
