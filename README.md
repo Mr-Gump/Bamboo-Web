@@ -10,7 +10,7 @@
 
 [使用演示（bilibili）](https://www.bilibili.com/video/BV1cq4y1j7RV/)
 
-作者邮箱：`gan000803@gmai.com`
+作者邮箱：`gan000803@gmail.com`
 
 使用截图
 
