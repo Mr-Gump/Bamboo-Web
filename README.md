@@ -10,7 +10,7 @@
 
 [![Jquery Version](https://img.shields.io/badge/JQuery-1.3+-blue.svg)](JQuery Version)
 
-[![BAmboo Web Version](https://img.shields.io/badge/Bamboo Web-v2.0-blue.svg)](Bamboo Web Version)
+[![BAmboo Web Version](https://img.shields.io/badge/Bamboo_Web-v2.0-blue.svg)](Bamboo Web Version)
 
 ## 简介
 
