@@ -1,16 +1,16 @@
 # Bamboo-Web
 
-[![Lissen](https://img.shields.io/badge/License-Apache2-red.svg)]
+[![License](https://img.shields.io/badge/License-Apache2-red.svg)](License)
 
-[![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)]
+[![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](Python Version)
 
-[![Django Version](https://img.shields.io/badge/Django-3.2+-blue.svg)]
+[![Django Version](https://img.shields.io/badge/Django-3.2+-blue.svg)](Django Version)
 
-[![Bootstrap Version](https://img.shields.io/badge/Bootstrap-4.6+-blue.svg)]
+[![Bootstrap Version](https://img.shields.io/badge/Bootstrap-4.6+-blue.svg)](Bootstrap Version)
 
-[![Jquery Version](https://img.shields.io/badge/JQuery-1.3+-blue.svg)]
+[![Jquery Version](https://img.shields.io/badge/JQuery-1.3+-blue.svg)](JQuery Version)
 
-[![BAmboo Web Version](https://img.shields.io/badge/Bamboo Web-v2.0-blue.svg)]
+[![BAmboo Web Version](https://img.shields.io/badge/Bamboo Web-v2.0-blue.svg)](Bamboo Web Version)
 
 ## 简介
 
