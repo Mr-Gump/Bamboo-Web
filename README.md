@@ -6,7 +6,7 @@
 
 针对 **XJTU-NECP** 团队压水堆计算程序 Bamboo-Core 基于 Django 的网页版可视化调用与结果展示一体化解决方案
 
-[在线Demo](http://live.mrgump.org:8888)
+[在线Demo](http://live.mrgump.org:8888) （因域名过期停止访问）
 
 [使用演示（bilibili）](https://www.bilibili.com/video/BV1cq4y1j7RV/)
 
