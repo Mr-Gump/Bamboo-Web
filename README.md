@@ -25,8 +25,9 @@
 ```bash
 git clone https://github.com/Mr-Gump/Bamboo-Web.git
 cd Bamboo-Web/src/BambooReConstruct
-pip install -r requirements.txt
-python manage.py runserver
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+python manage.py runserver 0.0.0.0:80
+
 ```
 
 
