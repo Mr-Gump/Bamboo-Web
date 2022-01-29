@@ -23,12 +23,13 @@
 ## 使用方法
 
 ```bash
-git clone https://github.com/Mr-Gump/Bamboo-Web.git
-cd Bamboo-Web/src/BambooReConstruct
+sudo -i
+git clone https://gitee.com/Mr-Gump/bamboo-web.git
+cd bamboo-web/src/BambooReConstruct
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 python manage.py runserver 0.0.0.0:80
 
 ```
 
-
+浏览器直接访问服务器 ip 公网地址即可
 
