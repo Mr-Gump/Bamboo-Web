@@ -1,12 +1,3 @@
-import Parchment from 'parchment';
-
-let SizeClass = new Parchment.Attributor.Class('size', 'ql-size', {
-  scope: Parchment.Scope.INLINE,
-  whitelist: ['small', 'large', 'huge']
-});
-let SizeStyle = new Parchment.Attributor.Style('size', 'font-size', {
-  scope: Parchment.Scope.INLINE,
-  whitelist: ['10px', '18px', '32px']
-});
-
-export { SizeClass, SizeStyle };
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c0c3c1594f0ebd739e38f9e87b0817dee0ffffceae719005e76ed524772f8a8
+size 360

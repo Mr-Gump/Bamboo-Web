@@ -1,11 +1,3 @@
-export default function desktopHide(el, menu, params, itemParams) {
-	if (!menu.length) {
-		return this;
-	}
-	
-	if(itemParams.desktop.animationOut) {
-		menu.removeClass(itemParams.desktop.animationIn).addClass(itemParams.desktop.animationOut).hide();
-	} else {
-		menu.removeClass(itemParams.desktop.animationIn).hide();
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f776f0b43399080d3d08069d8a3ea9a0f2c725d3e420f11e2849010c4557ccf
+size 323

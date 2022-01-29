@@ -1,21 +1,3 @@
-define( [
-	"../core",
-	"../deferred"
-], function( jQuery ) {
-
-"use strict";
-
-// These usually indicate a programmer mistake during development,
-// warn about them ASAP rather than swallowing them by default.
-var rerrorNames = /^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;
-
-jQuery.Deferred.exceptionHook = function( error, stack ) {
-
-	// Support: IE 8 - 9 only
-	// Console exists when dev tools are open, which can happen at any time
-	if ( window.console && window.console.warn && error && rerrorNames.test( error.name ) ) {
-		window.console.warn( "jQuery.Deferred exception: " + error.message, error.stack, stack );
-	}
-};
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9d2acd37e19fd453686fa37f72899575d047cbc5c810e187647f076dec22b42
+size 640

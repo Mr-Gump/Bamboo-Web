@@ -1,14 +1,3 @@
-export {Renderer} from './Renderer';
-export {Canvas, canvas} from './Canvas';
-import {SVG, create, pointsToPath, svg} from './SVG';
-SVG.create = create;
-SVG.pointsToPath = pointsToPath;
-export {SVG, svg};
-import './Renderer.getRenderer';	// This is a bit of a hack, but needed because circular dependencies
-
-export {Path} from './Path';
-export {CircleMarker, circleMarker} from './CircleMarker';
-export {Circle, circle} from './Circle';
-export {Polyline, polyline} from './Polyline';
-export {Polygon, polygon} from './Polygon';
-export {Rectangle, rectangle} from './Rectangle';
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e544db1bad41006f41828cd69e87c36867bf7b34f1fbdc0554b537651d768e7
+size 578

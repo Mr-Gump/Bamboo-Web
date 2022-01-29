@@ -1,21 +1,3 @@
-jvm.OrdinalScale = function(scale){
-  this.scale = scale;
-};
-
-jvm.OrdinalScale.prototype.getValue = function(value){
-  return this.scale[value];
-};
-
-jvm.OrdinalScale.prototype.getTicks = function(){
-  var ticks = [],
-      key;
-
-  for (key in this.scale) {
-    ticks.push({
-      label: key,
-      value: this.scale[key]
-    });
-  }
-
-  return ticks;
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:399276d2637bbaf97956a853f9115165b8a89b606a27a0ef9da0db8f568cf547
+size 352

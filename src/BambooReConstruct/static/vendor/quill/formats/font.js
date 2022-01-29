@@ -1,18 +1,3 @@
-import Parchment from 'parchment';
-
-let config = {
-  scope: Parchment.Scope.INLINE,
-  whitelist: ['serif', 'monospace']
-};
-
-let FontClass = new Parchment.Attributor.Class('font', 'ql-font', config);
-
-class FontStyleAttributor extends Parchment.Attributor.Style {
-  value(node) {
-    return super.value(node).replace(/["']/g, '');
-  }
-}
-
-let FontStyle = new FontStyleAttributor('font', 'font-family', config);
-
-export { FontStyle, FontClass };
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ab33c65f2dcfbed0d77aa9c4ee90da51fe04dee359fd6cab2aad46a497764c7
+size 443

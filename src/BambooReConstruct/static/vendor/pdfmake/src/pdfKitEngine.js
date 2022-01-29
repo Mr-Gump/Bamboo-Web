@@ -1,21 +1,3 @@
-'use strict';
-
-function _interopDefault(ex) {
-	return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex;
-}
-
-var PdfKit = _interopDefault(require('pdfkit'));
-
-function getEngineInstance() {
-	return PdfKit;
-}
-
-function createPdfDocument(options) {
-	options = options || {};
-	return new PdfKit(options);
-}
-
-module.exports = {
-	getEngineInstance: getEngineInstance,
-	createPdfDocument: createPdfDocument
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:17e054e25a101bbe17b146f52727091d5bebd58ac3fa8e1a6fcc4bcf227ca835
+size 447

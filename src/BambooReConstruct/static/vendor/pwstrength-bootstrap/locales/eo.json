@@ -1,17 +1,3 @@
-{
-    "wordMinLength": "Via pasvorto estas tro mallonga",
-    "wordMaxLength": "Via pasvorto estas tro longa",
-    "wordInvalidChar": "Via pasvorto enhavas nevalidan karaktero",
-    "wordNotEmail": "Ne uzu vian retpoŝtadreson kiel la pasvorton",
-    "wordSimilarToUsername": "Via pasvorto enhavas vian uzanto-nomon",
-    "wordTwoCharacterClasses": "Uzu signojn de diversaj tipoj (ekz., literoj kaj ciferoj)",
-    "wordRepetitions": "Tro multaj ripetiĝantaj signoj",
-    "wordSequences": "Via pasvorto enhavas simplan sinsekvon de signoj",
-    "errorList": "Eraroj:",
-    "veryWeak": "Trosimpla",
-    "weak": "Malforta",
-    "normal": "Mezforta",
-    "medium": "Akceptebla",
-    "strong": "Forta",
-    "veryStrong": "Elstare Forta"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e18379611db77163393d126ba65bc384cfd15941c11235c0cd8a65665bd58263
+size 735

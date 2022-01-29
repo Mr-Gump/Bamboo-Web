@@ -1,33 +1,3 @@
-define(function () {
-  // Hungarian
-  return {
-    errorLoading: function () {
-      return 'Az eredmények betöltése nem sikerült.';
-    },
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
-
-      return 'Túl hosszú. ' + overChars + ' karakterrel több, mint kellene.';
-    },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
-
-      return 'Túl rövid. Még ' + remainingChars + ' karakter hiányzik.';
-    },
-    loadingMore: function () {
-      return 'Töltés…';
-    },
-    maximumSelected: function (args) {
-      return 'Csak ' + args.maximum + ' elemet lehet kiválasztani.';
-    },
-    noResults: function () {
-      return 'Nincs találat.';
-    },
-    searching: function () {
-      return 'Keresés…';
-    },
-    removeAllItems: function () {
-      return 'Távolítson el minden elemet';
-    }
-  };
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0bc334447a01a80dd632d369a13a072d41b2457f180a0e7252b9a2e12fa92a1
+size 917

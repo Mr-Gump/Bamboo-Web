@@ -1,17 +1,3 @@
-{
-    "wordMinLength": "Girdiğiniz şifre çok Kısa",
-    "wordMaxLength": "Parolanız çok uzun",
-    "wordInvalidChar": "Şifreniz geçersiz bir karakter içeriyor",
-    "wordNotEmail": "E-mail adresinizi şifreniz içerisinde kullanmayınız",
-    "wordSimilarToUsername": "Kullanıcı Adınızı şifreniz içerisinde kullanmayınız",
-    "wordTwoCharacterClasses": "Başka karakter sınıfı kullanınız",
-    "wordRepetitions": "Çok fazla tekrar var",
-    "wordSequences": "Şifreniz Dizi içermektedir",
-    "errorList": "Hatalar:",
-    "veryWeak": "Çok Zayıf",
-    "weak": "Zayıf",
-    "normal": "Normal",
-    "medium": "Orta",
-    "strong": "Güçlü",
-    "veryStrong": "Çok Güçlü"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:37052ccf1977dcec477e63c247649a133dc250df2f37bb244ae1a8e43eb09d21
+size 706

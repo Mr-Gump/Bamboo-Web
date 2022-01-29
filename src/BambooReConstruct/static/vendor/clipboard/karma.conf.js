@@ -1,30 +1,3 @@
-var webpackConfig = require('./webpack.config.js');
-
-module.exports = function (karma) {
-    karma.set({
-        plugins: ['karma-webpack', 'karma-chai', 'karma-sinon', 'karma-mocha', 'karma-chrome-launcher'],
-
-        frameworks: ['chai', 'sinon', 'mocha'],
-
-        files: [
-            'src/**/*.js',
-            'test/**/*.js',
-        ],
-
-        preprocessors: {
-            'src/**/*.js': ['webpack'],
-            'test/**/*.js': ['webpack']
-        },
-
-        webpack: {
-            module: webpackConfig.module,
-            plugins: webpackConfig.plugins
-        },
-
-        webpackMiddleware: {
-            stats: 'errors-only'
-        },
-
-        browsers: ['ChromeHeadless']
-    });
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:c754e6b9d97142c220331414be4b39653f25be0e4396e61c75639a47e09b296d
+size 699

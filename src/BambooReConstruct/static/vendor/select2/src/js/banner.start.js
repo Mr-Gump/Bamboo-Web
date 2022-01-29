@@ -1,6 +1,3 @@
-(function () {
-  // Restore the Select2 AMD loader so it can be used
-  // Needed mostly in the language files, where the loader is not inserted
-  if (jQuery && jQuery.fn && jQuery.fn.select2 && jQuery.fn.select2.amd) {
-    var S2 = jQuery.fn.select2.amd;
-  }
+version https://git-lfs.github.com/spec/v1
+oid sha256:0924760c916867c3cd97b1b2ba833cbd11e3577073d2424de51d8469df87f9ba
+size 259

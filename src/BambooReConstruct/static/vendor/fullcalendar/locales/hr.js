@@ -1,29 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var hr = {
-    code: "hr",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 7  // The week that contains Jan 1st is the first week of the year.
-    },
-    buttonText: {
-      prev: "Prijašnji",
-      next: "Sljedeći",
-      today: "Danas",
-      month: "Mjesec",
-      week: "Tjedan",
-      day: "Dan",
-      list: "Raspored"
-    },
-    weekText: "Tje",
-    allDayText: "Cijeli dan",
-    moreLinkText: function(n) {
-      return "+ još " + n;
-    },
-    noEventsText: "Nema događaja za prikaz"
-  };
-
-  return hr;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed71bb3c14d6ca1db727e729bda62827448af015613e9c53ef00feba67412f4e
+size 617

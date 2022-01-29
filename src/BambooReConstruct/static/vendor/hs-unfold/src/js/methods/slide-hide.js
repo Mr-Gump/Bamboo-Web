@@ -1,17 +1,3 @@
-export default function slideHide(target, config, callback) {
-	target.slideUp({
-		duration: config.duration,
-		easing: config.easing,
-		complete: function () {
-			callback();
-			
-			config.afterClose();
-			
-			target.addClass(config.hiddenClass.slice(1));
-		}
-	});
-	
-	if(config.hasOverlay) {
-		$(config.overlayClass).fadeOut(200);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8c5577fd7d601cb8ee15689c7d58f4c61e050a58d958b719cfa0e50e5625672
+size 336

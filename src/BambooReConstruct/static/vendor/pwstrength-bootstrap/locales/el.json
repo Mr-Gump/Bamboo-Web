@@ -1,17 +1,3 @@
-{
-    "wordMinLength": "Ο κωδικός πρόσβασης δεν έχει τον ελάχιστο αριθμό χαρακτήρων",
-    "wordMaxLength": "Ο κωδικός πρόσβασής σας είναι πολύ μεγάλος",
-    "wordInvalidChar": "Ο κωδικός πρόσβασής σας περιέχει έναν μη έγκυρο χαρακτήρα",
-    "wordNotEmail": "Μη χρησιμοποιείτε το email ως κωδικό",
-    "wordSimilarToUsername": "Ο κωδικός πρόσβασης δεν πρέπει να περιέχει το username",
-    "wordTwoCharacterClasses": "Χρησιμοποιήστε διαφορετικές κλάσεις χαρακτήρων",
-    "wordRepetitions": "Πολλές επαναλήψεις",
-    "wordSequences": "Ο κωδικός πρόσβασης περιέχει επαναλήψεις",
-    "errorList": "Σφάλματα:",
-    "veryWeak": "Πολύ Αδύνατος",
-    "weak": "Αδύνατος",
-    "normal": "Κανονικός",
-    "medium": "Μέτριος",
-    "strong": "Δυνατός",
-    "veryStrong": "Πολύ Δυνατός"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9e5af400eef0b093974ef89b3c760d23ef8faea245a8b73401915adde90c135
+size 1132

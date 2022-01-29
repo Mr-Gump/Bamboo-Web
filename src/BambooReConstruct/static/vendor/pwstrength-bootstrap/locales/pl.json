@@ -1,17 +1,3 @@
-{
-    "wordMinLength": "Hasło jest zbyt krótkie",
-    "wordMaxLength": "Hasło jest za długie",
-    "wordInvalidChar": "Hasło zawiera nieprawidłowy znak",
-    "wordNotEmail": "Hasło nie może być Twoim emailem",
-    "wordSimilarToUsername": "Hasło nie może zawierać nazwy użytkownika",
-    "wordTwoCharacterClasses": "Użyj innych klas znaków",
-    "wordRepetitions": "Zbyt wiele powtórzeń",
-    "wordSequences": "Hasło zawiera sekwencje",
-    "errorList": "Błędy:",
-    "veryWeak": "Bardzo słabe",
-    "weak": "Słabe",
-    "normal": "Normalne",
-    "medium": "Średnie",
-    "strong": "Silne",
-    "veryStrong": "Bardzo silne"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:53e37e693891121db923f49202abb95e6b1733edf2be0d810d8681508baa34c3
+size 649

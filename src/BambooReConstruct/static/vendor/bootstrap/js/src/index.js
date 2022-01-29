@@ -1,34 +1,3 @@
-import Alert from './alert'
-import Button from './button'
-import Carousel from './carousel'
-import Collapse from './collapse'
-import Dropdown from './dropdown'
-import Modal from './modal'
-import Popover from './popover'
-import Scrollspy from './scrollspy'
-import Tab from './tab'
-import Toast from './toast'
-import Tooltip from './tooltip'
-import Util from './util'
-
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v4.5.3): index.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
-export {
-  Util,
-  Alert,
-  Button,
-  Carousel,
-  Collapse,
-  Dropdown,
-  Modal,
-  Popover,
-  Scrollspy,
-  Tab,
-  Toast,
-  Tooltip
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a91e084d07745b4ef9c91513e86f899caf29e55a8250e042d16fde474a71c14
+size 773

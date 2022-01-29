@@ -1,31 +1,3 @@
-/*!
- * jQuery Migrate - v@VERSION - @DATE
- * Copyright OpenJS Foundation and other contributors
- */
-( function( factory ) {
-	"use strict";
-
-	if ( typeof define === "function" && define.amd ) {
-
-		// AMD. Register as an anonymous module.
-		define( [ "jquery" ], function( jQuery ) {
-			return factory( jQuery, window );
-		} );
-	} else if ( typeof module === "object" && module.exports ) {
-
-		// Node/CommonJS
-		// eslint-disable-next-line no-undef
-		module.exports = factory( require( "jquery" ), window );
-	} else {
-
-		// Browser globals
-		factory( jQuery, window );
-	}
-} )( function( jQuery, window ) {
-"use strict";
-
-// @CODE
-// build.js inserts compiled jQuery here
-
-return jQuery;
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:02d2f5958fef9a5bca8101e03d3f7052217faa3ef74d58a63fd7a6a52968a338
+size 690

@@ -1,12 +1,3 @@
-import fullscreenAddClass from "./add-class";
-import fullscreenRemoveClass from "./remove-class";
-
-export default function fullscreenToggleClass(el, params) {
-	const options = params;
-	
-	if (!el.hasClass(options.toggleClassName.slice(1))) {
-		fullscreenAddClass(el, options);
-	} else {
-		fullscreenRemoveClass(el, options);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eba3603c346d04d3963ca234530e6817f28f5fd3e9b5cdb2aeb2e46a69ca53bd
+size 329

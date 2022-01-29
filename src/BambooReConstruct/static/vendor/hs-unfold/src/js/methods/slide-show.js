@@ -1,14 +1,3 @@
-export default function slideShow(target, config, callback) {
-	target.removeClass(config.hiddenClass.slice(1)).stop().slideDown({
-		duration: config.duration,
-		easing: config.easing,
-		complete: function () {
-			callback();
-			config.afterOpen();
-		}
-	});
-	
-	if(config.hasOverlay) {
-		$(config.overlayClass).fadeIn(200);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:95cb3df6ae9ee140a7eaf3ff59d7461bbd0fd84f679823ccc279697a67d3d66a
+size 327

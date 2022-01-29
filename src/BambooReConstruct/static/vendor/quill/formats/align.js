@@ -1,12 +1,3 @@
-import Parchment from 'parchment';
-
-let config = {
-  scope: Parchment.Scope.BLOCK,
-  whitelist: ['right', 'center', 'justify']
-};
-
-let AlignAttribute = new Parchment.Attributor.Attribute('align', 'align', config);
-let AlignClass = new Parchment.Attributor.Class('align', 'ql-align', config);
-let AlignStyle = new Parchment.Attributor.Style('align', 'text-align', config);
-
-export { AlignAttribute, AlignClass, AlignStyle };
+version https://git-lfs.github.com/spec/v1
+oid sha256:d297cc206a9b9feaa61350f5bb3c2693ca44436ca0c92fc43e48d172e4e2ebfe
+size 424

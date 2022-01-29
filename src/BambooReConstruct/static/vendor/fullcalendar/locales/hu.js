@@ -1,27 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var hu = {
-    code: "hu",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 4  // The week that contains Jan 4th is the first week of the year.
-    },
-    buttonText: {
-      prev: "vissza",
-      next: "előre",
-      today: "ma",
-      month: "Hónap",
-      week: "Hét",
-      day: "Nap",
-      list: "Napló"
-    },
-    weekText: "Hét",
-    allDayText: "Egész nap",
-    moreLinkText: "további",
-    noEventsText: "Nincs megjeleníthető esemény"
-  };
-
-  return hu;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:815064943cb5471cb06fa28b395d151308796b5a5af2886ba86e12258518cb67
+size 574

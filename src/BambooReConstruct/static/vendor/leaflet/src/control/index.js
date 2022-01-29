@@ -1,17 +1,3 @@
-import {Control, control} from './Control';
-import {Layers, layers} from './Control.Layers';
-import {Zoom, zoom} from './Control.Zoom';
-import {Scale, scale} from './Control.Scale';
-import {Attribution, attribution} from './Control.Attribution';
-
-Control.Layers = Layers;
-Control.Zoom = Zoom;
-Control.Scale = Scale;
-Control.Attribution = Attribution;
-
-control.layers = layers;
-control.zoom = zoom;
-control.scale = scale;
-control.attribution = attribution;
-
-export {Control, control};
+version https://git-lfs.github.com/spec/v1
+oid sha256:e388fd9fea69948d3609e5d58185cfc868df1b75ae6a526098026b2df490c25a
+size 484

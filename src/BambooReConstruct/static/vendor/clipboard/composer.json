@@ -1,25 +1,3 @@
-{
-  "name": "zenorocha/clipboardjs",
-  "description": "Modern copy to clipboard. No Flash. Just 3kb gzipped https://clipboardjs.com",
-  "type": "component",
-  "homepage": "https://clipboardjs.com/",
-  "authors": [
-    {
-      "name": "Zeno Rocha",
-      "homepage": "http://zenorocha.com/"
-    }
-  ],
-  "require": {
-    "oomphinc/composer-installers-extender": "*"
-  },
-  "extra": {
-    "component": {
-      "scripts": [
-        "dist/clipboard.js"
-      ],
-      "files": [
-        "dist/clipboard.min.js"
-      ]
-    }
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5fa3b257224bedb883a30fd42081054cb07f271d4350c4c500d367098e67c674
+size 527

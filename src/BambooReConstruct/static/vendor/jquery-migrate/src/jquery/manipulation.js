@@ -1,27 +1,3 @@
-import { migrateWarn } from "../main.js";
-
-var rxhtmlTag = /<(?!area|br|col|embed|hr|img|input|link|meta|param)(([a-z][^\/\0>\x20\t\r\n\f]*)[^>]*)\/>/gi,
-	origHtmlPrefilter = jQuery.htmlPrefilter,
-	makeMarkup = function( html ) {
-		var doc = window.document.implementation.createHTMLDocument( "" );
-		doc.body.innerHTML = html;
-		return doc.body && doc.body.innerHTML;
-	},
-	warnIfChanged = function( html ) {
-		var changed = html.replace( rxhtmlTag, "<$1></$2>" );
-		if ( changed !== html && makeMarkup( html ) !== makeMarkup( changed ) ) {
-			migrateWarn( "HTML tags must be properly nested and closed: " + html );
-		}
-	};
-
-jQuery.UNSAFE_restoreLegacyHtmlPrefilter = function() {
-	jQuery.htmlPrefilter = function( html ) {
-		warnIfChanged( html );
-		return html.replace( rxhtmlTag, "<$1></$2>" );
-	};
-};
-
-jQuery.htmlPrefilter = function( html ) {
-	warnIfChanged( html );
-	return origHtmlPrefilter( html );
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:b33391611b822d1ce34e677653cc2d04c5c6d8b85e991be99ac98f2a272e2a89
+size 910

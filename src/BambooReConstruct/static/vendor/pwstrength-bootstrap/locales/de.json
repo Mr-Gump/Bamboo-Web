@@ -1,17 +1,3 @@
-{
-    "wordMinLength": "Das Passwort ist zu kurz",
-    "wordMaxLength": "Das Passwort ist zu lang",
-    "wordInvalidChar": "Das Passwort enthält ein ungültiges Zeichen",
-    "wordNotEmail": "Das Passwort darf die E-Mail Adresse nicht enthalten",
-    "wordSimilarToUsername": "Das Passwort darf den Benutzernamen nicht enthalten",
-    "wordTwoCharacterClasses": "Bitte Buchstaben und Ziffern verwenden",
-    "wordRepetitions": "Zu viele Wiederholungen",
-    "wordSequences": "Das Passwort enthält Buchstabensequenzen",
-    "errorList": "Fehler:",
-    "veryWeak": "Sehr schwach",
-    "weak": "Schwach",
-    "normal": "Normal",
-    "medium": "Mittel",
-    "strong": "Stark",
-    "veryStrong": "Sehr stark"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d28ec1012fde22d54fefc575a2937dcfb599fa4636ce88d3289ae12eb2d9ddc5
+size 708

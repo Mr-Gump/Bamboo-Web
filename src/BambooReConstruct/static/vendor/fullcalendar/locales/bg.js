@@ -1,28 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var bg = {
-    code: "bg",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 7  // The week that contains Jan 1st is the first week of the year.
-    },
-    buttonText: {
-      prev: "назад",
-      next: "напред",
-      today: "днес",
-      month: "Месец",
-      week: "Седмица",
-      day: "Ден",
-      list: "График"
-    },
-    allDayText: "Цял ден",
-    moreLinkText: function(n) {
-      return "+още " + n;
-    },
-    noEventsText: "Няма събития за показване"
-  };
-
-  return bg;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ec842a13ee8a8e48f9322184c105aca71982118c00a3170e1275622b8660a1b
+size 648

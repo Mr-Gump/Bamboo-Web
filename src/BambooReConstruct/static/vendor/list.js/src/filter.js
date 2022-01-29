@@ -1,29 +1,3 @@
-module.exports = function(list) {
-
-  // Add handlers
-  list.handlers.filterStart = list.handlers.filterStart || [];
-  list.handlers.filterComplete = list.handlers.filterComplete || [];
-
-  return function(filterFunction) {
-    list.trigger('filterStart');
-    list.i = 1; // Reset paging
-    list.reset.filter();
-    if (filterFunction === undefined) {
-      list.filtered = false;
-    } else {
-      list.filtered = true;
-      var is = list.items;
-      for (var i = 0, il = is.length; i < il; i++) {
-        var item = is[i];
-        if (filterFunction(item)) {
-          item.filtered = true;
-        } else {
-          item.filtered = false;
-        }
-      }
-    }
-    list.update();
-    list.trigger('filterComplete');
-    return list.visibleItems;
-  };
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f42e87e3d74609fe2643f51e11b498faa0bcba75496c09bb45f5c753c4fbb67
+size 763

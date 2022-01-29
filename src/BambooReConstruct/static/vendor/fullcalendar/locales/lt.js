@@ -1,27 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var lt = {
-    code: "lt",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 4  // The week that contains Jan 4th is the first week of the year.
-    },
-    buttonText: {
-      prev: "Atgal",
-      next: "Pirmyn",
-      today: "Šiandien",
-      month: "Mėnuo",
-      week: "Savaitė",
-      day: "Diena",
-      list: "Darbotvarkė"
-    },
-    weekText: "SAV",
-    allDayText: "Visą dieną",
-    moreLinkText: "daugiau",
-    noEventsText: "Nėra įvykių rodyti"
-  };
-
-  return lt;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:c840bee1c78bfc865f8b6ad5027ed6509732ef184cca07629cfb197dc84162db
+size 582

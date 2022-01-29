@@ -1,34 +1,3 @@
-define( [
-	"../core"
-], function( jQuery ) {
-
-"use strict";
-
-var
-
-	// Map over jQuery in case of overwrite
-	_jQuery = window.jQuery,
-
-	// Map over the $ in case of overwrite
-	_$ = window.$;
-
-jQuery.noConflict = function( deep ) {
-	if ( window.$ === jQuery ) {
-		window.$ = _$;
-	}
-
-	if ( deep && window.jQuery === jQuery ) {
-		window.jQuery = _jQuery;
-	}
-
-	return jQuery;
-};
-
-// Expose jQuery and $ identifiers, even in AMD
-// (#7102#comment:10, https://github.com/jquery/jquery/pull/557)
-// and CommonJS for browser emulators (#13566)
-if ( typeof noGlobal === "undefined" ) {
-	window.jQuery = window.$ = jQuery;
-}
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:d2090914450e8ceef9962928029cf3bf0d13f8e856a64b6918f31c936927845d
+size 620

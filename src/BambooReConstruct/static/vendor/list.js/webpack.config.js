@@ -1,34 +1,3 @@
-const webpack = require('webpack'),
-      PACKAGE = require('./package.json');
-
-module.exports = {
-  entry: {
-    list: './src/index.js',
-    "list.min": './src/index.js'
-  },
-  output: {
-    path: __dirname + '/dist',
-    filename: "[name].js",
-    library: 'List'
-  },
-  module: {
-    rules: [{
-      enforce: 'pre',
-      test: /\.js$/,
-      exclude: /(node_modules|src\/utils\/extend\.js)/,
-      loader: "jshint-loader"
-    }]
-  },
-  devServer: {
-    inline: true
-  },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      include: /\.min\.js$/,
-      minimize: true
-    }),
-    new webpack.BannerPlugin({
-      banner: 'List.js v' + PACKAGE.version + ' (' + PACKAGE.homepage + ') by ' + PACKAGE.author.name + ' (' + PACKAGE.author.url + ')'
-    })
-  ]
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:1da6f4c4ee8425afcd1c373fae856d7d1b6460469b51747a394cf752e20d88b7
+size 769

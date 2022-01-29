@@ -1,22 +1,3 @@
-{
-  "name": "components/flag-icon-css",
-  "type": "component",
-  "description": "CSS for vector based country flags",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Panayiotis Lipiridis (Lipis)",
-      "email": "lipiridis@gmail.com"
-    }
-  ],
-  "extra": {
-    "component": {
-      "name": "flag-icon-css",
-      "files": [
-        "less/**",
-        "css/**",
-        "flags/**"
-      ]
-    }
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6930f895fffb805be286ae1f31bf509bfc20adcf91b75ee00ef19c0b16fb4428
+size 409

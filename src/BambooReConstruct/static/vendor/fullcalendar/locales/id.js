@@ -1,27 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var id = {
-    code: "id",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 7  // The week that contains Jan 1st is the first week of the year.
-    },
-    buttonText: {
-      prev: "mundur",
-      next: "maju",
-      today: "hari ini",
-      month: "Bulan",
-      week: "Minggu",
-      day: "Hari",
-      list: "Agenda"
-    },
-    weekText: "Mg",
-    allDayText: "Sehari penuh",
-    moreLinkText: "lebih",
-    noEventsText: "Tidak ada acara untuk ditampilkan"
-  };
-
-  return id;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:7fb30c41d28a5a13fb6b31f1b73f4aaa34a28bc9a84bd106d81ef766e5f7bc40
+size 579

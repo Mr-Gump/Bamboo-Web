@@ -1,29 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var vi = {
-    code: "vi",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 4  // The week that contains Jan 4th is the first week of the year.
-    },
-    buttonText: {
-      prev: "Trước",
-      next: "Tiếp",
-      today: "Hôm nay",
-      month: "Tháng",
-      week: "Tuần",
-      day: "Ngày",
-      list: "Lịch biểu"
-    },
-    weekText: "Tu",
-    allDayText: "Cả ngày",
-    moreLinkText: function(n) {
-      return "+ thêm " + n;
-    },
-    noEventsText: "Không có sự kiện để hiển thị"
-  };
-
-  return vi;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:1a3ed9db5f1a39653169f06e9e3c57227110c11c99f23c10e92a971f35f5f632
+size 640

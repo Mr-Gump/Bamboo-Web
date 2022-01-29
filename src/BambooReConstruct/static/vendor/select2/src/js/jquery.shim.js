@@ -1,14 +1,3 @@
-/* global jQuery:false, $:false */
-define(function () {
-  var _$ = jQuery || $;
-
-  if (_$ == null && console && console.error) {
-    console.error(
-      'Select2: An instance of jQuery or a jQuery-compatible library was not ' +
-      'found. Make sure that you are including jQuery before Select2 on your ' +
-      'web page.'
-    );
-  }
-
-  return _$;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:95f613051e02863c5ad6042cb53db2f3afd4623cae44323c6cf8b92c31ea55e8
+size 357

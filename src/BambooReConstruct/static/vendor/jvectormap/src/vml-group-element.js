@@ -1,13 +1,3 @@
-jvm.VMLGroupElement = function(){
-  jvm.VMLGroupElement.parentClass.call(this, 'group');
-
-  this.node.style.left = '0px';
-  this.node.style.top = '0px';
-  this.node.coordorigin = "0 0";
-};
-
-jvm.inherits(jvm.VMLGroupElement, jvm.VMLElement);
-
-jvm.VMLGroupElement.prototype.add = function(element){
-  this.node.appendChild( element.node );
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:778573a42db5f4c9a55a6378769f78f0fd98d87cf47c3a7d4b1e990966741f35
+size 340

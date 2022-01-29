@@ -1,11 +1,3 @@
-export default function cssAnimationShow(target, config) {
-	if(config.cssAnimatedClass) {
-		target.removeClass(`${config.hiddenClass.slice(1)} ${config.animationOut}`).addClass(config.animationIn);
-	} else {
-		target.removeClass(`${config.hiddenClass.slice(1)} ${config.animationOut}`);
-		
-		setTimeout(function() {
-			target.addClass(config.animationIn);
-		});
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ccf396b1732eb245409e733a8913316dd6fc76b8c6f27dfde3a27d91300865f6
+size 367

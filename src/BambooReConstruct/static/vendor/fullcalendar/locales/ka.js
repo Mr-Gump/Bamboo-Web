@@ -1,29 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var ka = {
-    code: "ka",
-    week: {
-      dow: 1,
-      doy: 7
-    },
-    buttonText: {
-      prev: "წინა",
-      next: "შემდეგი",
-      today: "დღეს",
-      month: "თვე",
-      week: "კვირა",
-      day: "დღე",
-      list: "დღის წესრიგი"
-    },
-    weekText: "კვ",
-    allDayText: "მთელი დღე",
-    moreLinkText: function(n) {
-      return "+ კიდევ " + n;
-    },
-    noEventsText: "ღონისძიებები არ არის"
-  };
-
-  return ka;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e927ca7e01077f686bb1ed930bd52f267cfb5f871ec6c5d9564c86ba755c7fc
+size 637

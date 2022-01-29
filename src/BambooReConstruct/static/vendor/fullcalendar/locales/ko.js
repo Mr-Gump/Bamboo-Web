@@ -1,23 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var ko = {
-    code: "ko",
-    buttonText: {
-      prev: "이전달",
-      next: "다음달",
-      today: "오늘",
-      month: "월",
-      week: "주",
-      day: "일",
-      list: "일정목록"
-    },
-    weekText: "주",
-    allDayText: "종일",
-    moreLinkText: "개",
-    noEventsText: "일정이 없습니다"
-  };
-
-  return ko;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:e78627b218446b5e7d2edf6da2fd722bdbd68116851612ded99c6892b2735768
+size 415

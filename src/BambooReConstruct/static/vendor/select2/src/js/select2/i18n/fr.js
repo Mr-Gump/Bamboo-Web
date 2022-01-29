@@ -1,36 +1,3 @@
-define(function () {
-  // French
-  return {
-    errorLoading: function () {
-      return 'Les résultats ne peuvent pas être chargés.';
-    },
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
-
-      return 'Supprimez ' + overChars + ' caractère' +
-        ((overChars > 1) ? 's' : '');
-    },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
-
-      return 'Saisissez au moins ' + remainingChars + ' caractère' +
-        ((remainingChars > 1) ? 's' : '');
-    },
-    loadingMore: function () {
-      return 'Chargement de résultats supplémentaires…';
-    },
-    maximumSelected: function (args) {
-      return 'Vous pouvez seulement sélectionner ' + args.maximum +
-        ' élément' + ((args.maximum > 1) ? 's' : '');
-    },
-    noResults: function () {
-      return 'Aucun résultat trouvé';
-    },
-    searching: function () {
-      return 'Recherche en cours…';
-    },
-    removeAllItems: function () {
-      return 'Supprimer tous les éléments';
-    }
-  };
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d8cfbb0510a740ccc1480c03471d3373bcbc23958a08213d2d045130acf9f4d
+size 1073

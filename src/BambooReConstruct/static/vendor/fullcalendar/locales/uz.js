@@ -1,21 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var uz = {
-    code: "uz",
-    buttonText: {
-      month: "Oy",
-      week: "Xafta",
-      day: "Kun",
-      list: "Kun tartibi"
-    },
-    allDayText: "Kun bo'yi",
-    moreLinkText: function(n) {
-      return "+ yana " + n;
-    },
-    noEventsText: "Ko'rsatish uchun voqealar yo'q"
-  };
-
-  return uz;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:30c722988365adc6f3b0032d68054a70586721722fd6cc578c744ac14803dfeb
+size 374

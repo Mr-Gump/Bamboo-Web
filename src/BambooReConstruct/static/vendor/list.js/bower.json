@@ -1,27 +1,3 @@
-{
-  "name": "list.js",
-  "main": "dist/list.js",
-  "homepage": "http://listjs.com",
-  "authors": [
-    "Jonny Strömberg <jonny.stromberg@gmail.com>"
-  ],
-  "description": "The perfect library for lists. Supports search, sort, filters and flexibility. Built to be invisible and work on existing HTML",
-  "keywords": [
-    "list",
-    "search",
-    "sort",
-    "table",
-    "dom",
-    "html",
-    "ui"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "components",
-    "test",
-    "tests"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:65403cbc6116f53d13a34fdcd430b6a84ce322a88a9840ec85353d89632f86f2
+size 545

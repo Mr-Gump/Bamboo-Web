@@ -1,18 +1,3 @@
-/**
- * Class for vector images manipulations.
- * @constructor
- * @param {DOMElement} container to place canvas to
- * @param {Number} width
- * @param {Number} height
- */
-jvm.VectorCanvas = function(container, width, height) {
-  this.mode = window.SVGAngle ? 'svg' : 'vml';
-
-  if (this.mode == 'svg') {
-    this.impl = new jvm.SVGCanvasElement(container, width, height);
-  } else {
-    this.impl = new jvm.VMLCanvasElement(container, width, height);
-  }
-  this.impl.mode = this.mode;
-  return this.impl;
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:26b0721a85658201b8cae346383d1cd0988e38ab4b2142055624009f11705372
+size 504

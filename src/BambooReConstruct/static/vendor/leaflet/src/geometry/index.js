@@ -1,8 +1,3 @@
-export {Point, toPoint as point} from './Point';
-export {Bounds, toBounds as bounds} from './Bounds';
-export {Transformation, toTransformation as transformation} from './Transformation';
-
-import * as LineUtil from './LineUtil';
-export {LineUtil};
-import * as PolyUtil from './PolyUtil';
-export {PolyUtil};
+version https://git-lfs.github.com/spec/v1
+oid sha256:cd013dd2f5cea2e6cb3ea6266ce664b45b864617e0afe31b3c7fc3dfa082e7e9
+size 306

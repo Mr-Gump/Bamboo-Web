@@ -1,5 +1,3 @@
-{
-  "name": "flag-icon-css",
-  "main": ["css/flag-icon.min.css", "less/flag-icon.less", "sass/_flag-icon.scss"],
-  "ignore": ["**/.*", "assets", "Gruntfile.coffee", "index.html", "LICENSE", "package.json"]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:11d4277a73b6bd361bb2b74439479e1983bce063537d8a5398b10ffa76bc4877
+size 208

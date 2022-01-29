@@ -1,29 +1,3 @@
-import Parchment from 'parchment';
-
-
-class Break extends Parchment.Embed {
-  static value() {
-    return undefined;
-  }
-
-  insertInto(parent, ref) {
-    if (parent.children.length === 0) {
-      super.insertInto(parent, ref);
-    } else {
-      this.remove();
-    }
-  }
-
-  length() {
-    return 0;
-  }
-
-  value() {
-    return '';
-  }
-}
-Break.blotName = 'break';
-Break.tagName = 'BR';
-
-
-export default Break;
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1ce1469cb25ad2e8c6d94d7b720a4298442b94907bcb8a4af74540b875178fe
+size 408

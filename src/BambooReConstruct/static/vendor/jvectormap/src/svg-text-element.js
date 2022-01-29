@@ -1,13 +1,3 @@
-jvm.SVGTextElement = function(config, style){
-  jvm.SVGTextElement.parentClass.call(this, 'text', config, style);
-}
-
-jvm.inherits(jvm.SVGTextElement, jvm.SVGShapeElement);
-
-jvm.SVGTextElement.prototype.applyAttr = function(attr, value){
-  if (attr === 'text') {
-    this.node.textContent = value;
-  } else {
-    jvm.SVGTextElement.parentClass.prototype.applyAttr.apply(this, arguments);
-  }
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:ce096b560a048f7e4869cbfdee4319e84fed59f37632778c2a8eb13435d6e683
+size 393

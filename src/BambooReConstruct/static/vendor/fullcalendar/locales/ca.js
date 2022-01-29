@@ -1,27 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var ca = {
-    code: "ca",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 4  // The week that contains Jan 4th is the first week of the year.
-    },
-    buttonText: {
-      prev: "Anterior",
-      next: "Següent",
-      today: "Avui",
-      month: "Mes",
-      week: "Setmana",
-      day: "Dia",
-      list: "Agenda"
-    },
-    weekText: "Set",
-    allDayText: "Tot el dia",
-    moreLinkText: "més",
-    noEventsText: "No hi ha esdeveniments per mostrar"
-  };
-
-  return ca;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf9afa07ef66c4549fbd7461abc63abc97681d5b9269be2c323118b62a16870e
+size 578

@@ -1,12 +1,3 @@
- if( !String.prototype.includes ){
-    String.prototype.includes = function(search, start) {
-      if (typeof start !== 'number')
-        start = 0;
-
-      if (start + search.length > this.length)
-        return false;
-
-      else
-        return this.indexOf(search, start) !== -1;
-    };
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:12a3f49dff18abf4d0e5fc5c6b1e1a85ad3fa01d0c3006ed0d774050f75d14a4
+size 290

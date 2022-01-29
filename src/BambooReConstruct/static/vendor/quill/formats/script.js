@@ -1,23 +1,3 @@
-import Inline from '../blots/inline';
-
-class Script extends Inline {
-  static create(value) {
-    if (value === 'super') {
-      return document.createElement('sup');
-    } else if (value === 'sub') {
-      return document.createElement('sub');
-    } else {
-      return super.create(value);
-    }
-  }
-
-  static formats(domNode) {
-    if (domNode.tagName === 'SUB') return 'sub';
-    if (domNode.tagName === 'SUP') return 'super';
-    return undefined;
-  }
-}
-Script.blotName = 'script';
-Script.tagName = ['SUB', 'SUP'];
-
-export default Script;
+version https://git-lfs.github.com/spec/v1
+oid sha256:288ec47626107814e7c6bbd3f4e4682a62b732e5ded47f64d648ea6efd63ce1f
+size 544

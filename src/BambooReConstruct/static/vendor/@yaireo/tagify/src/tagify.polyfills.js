@@ -1,12 +1,3 @@
-import "./polyfills/String.trim"
-import "./polyfills/NodeList.forEach"
-import "./polyfills/Array.findIndex"
-import "./polyfills/Array.some"
-import "./polyfills/String.includes"
-import "./polyfills/Object.assign"
-import "./polyfills/Event"
-import "./polyfills/Element.matches"
-import "./polyfills/Element.closest"
-import "./polyfills/AutoUrlDetect"
-import "./polyfills/Element.classList"
-import "./polyfills/es6-promise"
+version https://git-lfs.github.com/spec/v1
+oid sha256:46e178a0b79a57aa149211a39b468373dcc8f1717e8928321a014a22d67b206e
+size 430

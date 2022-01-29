@@ -1,29 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var et = {
-    code: "et",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 4  // The week that contains Jan 4th is the first week of the year.
-    },
-    buttonText: {
-      prev: "Eelnev",
-      next: "Järgnev",
-      today: "Täna",
-      month: "Kuu",
-      week: "Nädal",
-      day: "Päev",
-      list: "Päevakord"
-    },
-    weekText: "näd",
-    allDayText: "Kogu päev",
-    moreLinkText: function(n) {
-      return "+ veel " + n;
-    },
-    noEventsText: "Kuvamiseks puuduvad sündmused"
-  };
-
-  return et;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:984cdf06fe83b6717e82e3681f059848e8fa82850f209d60c263471d9ce52d90
+size 620

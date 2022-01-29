@@ -1,12 +1,3 @@
-{
-  "name": "jquery-mask-plugin",
-  "version": "1.14.16",
-  "main": "dist/jquery.mask.js",
-  "ignore": [
-    "deploy.rb",
-    "jquery.mask.json",
-    "Gruntfile.js",
-    "test/*",
-    ".*"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2db8eb01afc9edcb676b7ce9337fbd9737f780e010e81373a0c514f43764e87e
+size 195

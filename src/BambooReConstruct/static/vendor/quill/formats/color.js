@@ -1,21 +1,3 @@
-import Parchment from 'parchment';
-
-class ColorAttributor extends Parchment.Attributor.Style {
-  value(domNode) {
-    let value = super.value(domNode);
-    if (!value.startsWith('rgb(')) return value;
-    value = value.replace(/^[^\d]+/, '').replace(/[^\d]+$/, '');
-    return '#' + value.split(',').map(function(component) {
-      return ('00' + parseInt(component).toString(16)).slice(-2);
-    }).join('');
-  }
-}
-
-let ColorClass = new Parchment.Attributor.Class('color', 'ql-color', {
-  scope: Parchment.Scope.INLINE
-});
-let ColorStyle = new ColorAttributor('color', 'color', {
-  scope: Parchment.Scope.INLINE
-});
-
-export { ColorAttributor, ColorClass, ColorStyle };
+version https://git-lfs.github.com/spec/v1
+oid sha256:54560542967ed3b8d1730d6be4d413bcdf317455cfd584d72125b41155daa8fe
+size 669

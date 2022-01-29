@@ -1,25 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var ja = {
-    code: "ja",
-    buttonText: {
-      prev: "前",
-      next: "次",
-      today: "今日",
-      month: "月",
-      week: "週",
-      day: "日",
-      list: "予定リスト"
-    },
-    weekText: "週",
-    allDayText: "終日",
-    moreLinkText: function(n) {
-      return "他 " + n + " 件";
-    },
-    noEventsText: "表示する予定はありません"
-  };
-
-  return ja;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:c0ff470327662ade4eed5486285d8a3f02c9723006561a9ece7eaefc85940d2a
+size 468

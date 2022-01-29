@@ -1,21 +1,3 @@
-// Returns 0 if v1 == v2, -1 if v1 < v2, 1 if v1 > v2
-function compareVersions( v1, v2 ) {
-	var i,
-		rVersionParts = /^(\d+)\.(\d+)\.(\d+)/,
-		v1p = rVersionParts.exec( v1 ) || [ ],
-		v2p = rVersionParts.exec( v2 ) || [ ];
-
-	for ( i = 1; i <= 3; i++ ) {
-		if ( +v1p[ i ] > +v2p[ i ] ) {
-			return 1;
-		}
-		if ( +v1p[ i ] < +v2p[ i ] ) {
-			return -1;
-		}
-	}
-	return 0;
-}
-
-export function jQueryVersionSince( version ) {
-	return compareVersions( jQuery.fn.jquery, version ) >= 0;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0b620327977d2310c1092993a6cddd53b6252310bae2b7ba80935dedc840fe6
+size 481

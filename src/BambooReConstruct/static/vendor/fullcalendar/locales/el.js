@@ -1,27 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var el = {
-    code: "el",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 4  // The week that contains Jan 4st is the first week of the year.
-    },
-    buttonText: {
-      prev: "Προηγούμενος",
-      next: "Επόμενος",
-      today: "Σήμερα",
-      month: "Μήνας",
-      week: "Εβδομάδα",
-      day: "Ημέρα",
-      list: "Ατζέντα"
-    },
-    weekText: "Εβδ",
-    allDayText: "Ολοήμερο",
-    moreLinkText: "περισσότερα",
-    noEventsText: "Δεν υπάρχουν γεγονότα προς εμφάνιση"
-  };
-
-  return el;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9f97b317dc382dd5924767eb78e11aae1d0d38ca34916c2464f8ad0cfd52815
+size 700

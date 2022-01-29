@@ -1,29 +1,3 @@
-define([
-  'jquery'
-], function ($) {
-  function ClickMask () { }
-
-  ClickMask.prototype.bind = function (decorate, $container, container) {
-    var self = this;
-
-    decorate.call(this, $container, container);
-
-    this.$mask = $(
-      '<div class="select2-close-mask"></div>'
-    );
-
-    this.$mask.on('mousedown touchstart click', function () {
-      self.trigger('close', {});
-    });
-  };
-
-  ClickMask.prototype._attachCloseHandler = function (decorate, container) {
-    $(document.body).append(this.$mask);
-  };
-
-  ClickMask.prototype._detachCloseHandler = function (deocrate, container) {
-    this.$mask.detach();
-  };
-
-  return ClickMask;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:09f042609e584d469edaacfb972666dd23076ccab43f27e95792aae55e210c80
+size 652

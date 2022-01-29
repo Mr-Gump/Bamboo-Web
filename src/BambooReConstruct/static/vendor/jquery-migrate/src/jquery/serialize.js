@@ -1,22 +1,3 @@
-import { migrateWarn } from "../main.js";
-
-// Support jQuery slim which excludes the ajax module
-// The jQuery.param patch is about respecting `jQuery.ajaxSettings.traditional`
-// so it doesn't make sense for the slim build.
-if ( jQuery.ajax ) {
-
-var oldParam = jQuery.param;
-
-jQuery.param = function( data, traditional ) {
-	var ajaxTraditional = jQuery.ajaxSettings && jQuery.ajaxSettings.traditional;
-
-	if ( traditional === undefined && ajaxTraditional ) {
-
-		migrateWarn( "jQuery.param() no longer uses jQuery.ajaxSettings.traditional" );
-		traditional = ajaxTraditional;
-	}
-
-	return oldParam.call( this, data, traditional );
-};
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de80177b3ab3fb647fd408cbc29293c2830c424485eca47c1f5eadd60e48ad84
+size 635

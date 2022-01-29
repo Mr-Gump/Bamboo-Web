@@ -1,33 +1,3 @@
-define(function () {
-  // Arabic
-  return {
-    errorLoading: function () {
-      return 'لا يمكن تحميل النتائج';
-    },
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
-
-      return 'الرجاء حذف ' + overChars + ' عناصر';
-    },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
-
-      return 'الرجاء إضافة ' + remainingChars + ' عناصر';
-    },
-    loadingMore: function () {
-      return 'جاري تحميل نتائج إضافية...';
-    },
-    maximumSelected: function (args) {
-      return 'تستطيع إختيار ' + args.maximum + ' بنود فقط';
-    },
-    noResults: function () {
-      return 'لم يتم العثور على أي نتائج';
-    },
-    searching: function () {
-      return 'جاري البحث…';
-    },
-     removeAllItems: function () {
-      return 'قم بإزالة كل العناصر';
-    }
-  };
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:0185e36ac67a774e1590c82d1a34e1fe4f1166c1f993bceb93b87b8b0b4f7092
+size 988

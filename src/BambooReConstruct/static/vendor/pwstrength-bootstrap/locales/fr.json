@@ -1,17 +1,3 @@
-{
-    "wordMinLength": "Votre mot de passe est trop court",
-    "wordMaxLength": "Votre mot de passe est trop long",
-    "wordInvalidChar": "Votre mot de passe contient un caractère invalide",
-    "wordNotEmail": "Ne pas utiliser votre adresse e-mail comme mot de passe",
-    "wordSimilarToUsername": "Votre mot de passe ne peut pas contenir votre nom d'utilisateur",
-    "wordTwoCharacterClasses": "Utilisez différents type de caractères",
-    "wordRepetitions": "Trop de répétitions",
-    "wordSequences": "Votre mot de passe contient des séquences",
-    "errorList": "Erreurs:",
-    "veryWeak": "Très Faible",
-    "weak": "Faible",
-    "normal": "Normal",
-    "medium": "Moyen",
-    "strong": "Fort",
-    "veryStrong": "Très Fort"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:16f79833a858f32440553d3a2c26b3f9636504268d6a1c467925ebb36ba99d2d
+size 744

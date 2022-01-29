@@ -150,7 +150,7 @@ Build date: 2019-12-19 16:51:02
 .irs--flat .irs-bar {
   top: 25px;
   height: 12px;
-  background-color: #377dff;
+  background-color: #ed5565;
 }
 .irs--flat .irs-bar--single {
   border-radius: 4px 0 0 4px;
@@ -199,7 +199,7 @@ Build date: 2019-12-19 16:51:02
   line-height: 1.333;
   text-shadow: none;
   padding: 1px 5px;
-  background-color: #377dff;
+  background-color: #ed5565;
   border-radius: 4px;
 }
 .irs--flat .irs-from:before,

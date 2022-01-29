@@ -1,8 +1,3 @@
-{
-  "name": "chartjs-chart-matrix",
-  "description": "Chart.js module for creating matrix charts",
-  "homepage": "https://github.com/kurkle/chartjs-chart-matrix#readme",
-  "license": "MIT",
-  "version": "0.1.3",
-  "main": "dist/chartjs-chart-matrix.js"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a39d766d176812811e2c33fa14e918646230bcb9629cf372d647b11347a26908
+size 254

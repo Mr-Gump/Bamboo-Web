@@ -1,27 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var nb = {
-    code: "nb",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 4  // The week that contains Jan 4th is the first week of the year.
-    },
-    buttonText: {
-      prev: "Forrige",
-      next: "Neste",
-      today: "I dag",
-      month: "Måned",
-      week: "Uke",
-      day: "Dag",
-      list: "Agenda"
-    },
-    weekText: "Uke",
-    allDayText: "Hele dagen",
-    moreLinkText: "til",
-    noEventsText: "Ingen hendelser å vise"
-  };
-
-  return nb;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5f2218f4f2e946cfef1aa7a0b8df7f58ddc192d16781ef81ca34b056dbf2ec0
+size 562

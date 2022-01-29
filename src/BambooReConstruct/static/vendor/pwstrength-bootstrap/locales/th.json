@@ -1,17 +1,3 @@
-{
-    "wordMinLength": "รหัสผ่านของคุณสั้นเกินไป",
-    "wordMaxLength": "รหัสผ่านของคุณยาวเกินไป",
-    "wordInvalidChar": "รหัสผ่านของคุณมีอักษรที่ไม่ถูกต้อง",
-    "wordNotEmail": "คุณไม่สามารถใช้รหัสผ่านเหมือนกับอีเมล์ของคุณได้",
-    "wordSimilarToUsername": "รหัสผ่านไม่ควรประกอบด้วยคำที่เป็น username",
-    "wordTwoCharacterClasses": "ลองเป็นกลุ่มคำใหม่",
-    "wordRepetitions": "มีอักษรซ้ำเยอะเกินไป",
-    "wordSequences": "รหัสผ่านของคุณเดาง่ายเกินไป",
-    "errorList": "Errors:",
-    "veryWeak": "เดาง่ายมาก",
-    "weak": "เดาง่าย",
-    "normal": "พอใช้",
-    "medium": "กำลังดี",
-    "strong": "ค่อนข้างดี",
-    "veryStrong": "ดีมาก"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4251491716e9a83068861bdd48aaf6c98502362679ca222e55f07bd1502e58b3
+size 1183

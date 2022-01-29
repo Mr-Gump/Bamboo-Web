@@ -1,23 +1,3 @@
-define( [], function() {
-
-"use strict";
-
-// Matches dashed string for camelizing
-var rmsPrefix = /^-ms-/,
-	rdashAlpha = /-([a-z])/g;
-
-// Used by camelCase as callback to replace()
-function fcamelCase( _all, letter ) {
-	return letter.toUpperCase();
-}
-
-// Convert dashed to camelCase; used by the css and data modules
-// Support: IE <=9 - 11, Edge 12 - 15
-// Microsoft forgot to hump their vendor prefix (#9572)
-function camelCase( string ) {
-	return string.replace( rmsPrefix, "ms-" ).replace( rdashAlpha, fcamelCase );
-}
-
-return camelCase;
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:b118e0f019576aff0865f4c58de24476224d87b1be6e49e919c33207e41f6602
+size 546

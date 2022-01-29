@@ -1,30 +1,3 @@
-class Theme {
-  constructor(quill, options) {
-    this.quill = quill;
-    this.options = options;
-    this.modules = {};
-  }
-
-  init() {
-    Object.keys(this.options.modules).forEach((name) => {
-      if (this.modules[name] == null) {
-        this.addModule(name);
-      }
-    });
-  }
-
-  addModule(name) {
-    let moduleClass = this.quill.constructor.import(`modules/${name}`);
-    this.modules[name] = new moduleClass(this.quill, this.options.modules[name] || {});
-    return this.modules[name];
-  }
-}
-Theme.DEFAULTS = {
-  modules: {}
-};
-Theme.themes = {
-  'default': Theme
-};
-
-
-export default Theme;
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e88a236d3231d9204856374ed0c9b282b872ef1afa0c529d4a2c41ac4a500bb
+size 602

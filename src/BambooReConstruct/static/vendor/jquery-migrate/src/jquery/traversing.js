@@ -1,8 +1,3 @@
-import { migrateWarn } from "../main.js";
-
-var oldSelf = jQuery.fn.andSelf || jQuery.fn.addBack;
-
-jQuery.fn.andSelf = function() {
-	migrateWarn( "jQuery.fn.andSelf() is deprecated and removed, use jQuery.fn.addBack()" );
-	return oldSelf.apply( this, arguments );
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e4fdbd1e05189b3a3db256fcdb65e56e6a83b6d850ce8a52955936a484bc4aa
+size 266

@@ -1,22 +1,3 @@
-{
-  "name": "clipboard",
-  "version": "2.0.6",
-  "description": "Modern copy to clipboard. No Flash. Just 3kb",
-  "license": "MIT",
-  "main": "dist/clipboard.js",
-  "ignore": [
-    "/.*/",
-    "/demo/",
-    "/test/",
-    "/.*",
-    "/bower.json",
-    "/karma.conf.js",
-    "/src",
-    "/lib"
-  ],
-  "keywords": [
-    "clipboard",
-    "copy",
-    "cut"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2031c1afa7d10a4566ee8cb5002a9efaa90e9a2d9278b25c77c09cdee87519b8
+size 358

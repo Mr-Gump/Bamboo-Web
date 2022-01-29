@@ -1,30 +1,3 @@
-// Support jQuery slim which excludes the ajax module
-if ( jQuery.ajax ) {
-
-QUnit.module( "ajax" );
-
-QUnit.test( "jQuery.ajax() deprecations on jqXHR", function( assert ) {
-	assert.expect( 3 );
-
-	var done = assert.async();
-
-	expectWarning( assert, ".success(), .error(), .compete() calls", 3, function() {
-
-		jQuery.ajax( "/not-found.404" )
-			.success( jQuery.noop )
-			.error( function( jQXHR ) {
-
-				// Local file errors returns 0, pretend it's a 404
-				assert.equal( jQXHR.status || 404, 404, "ajax error" );
-			} )
-			.complete( function() {
-				assert.ok( true, "ajax complete" );
-
-				// Wait for expectWarning to complete
-				setTimeout( done, 1 );
-			} );
-	} );
-
-} );
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5775f56e199818d27c78bd5edc122ab59b7f7cd043b6b6ff54f101d59ce1fd7d
+size 682

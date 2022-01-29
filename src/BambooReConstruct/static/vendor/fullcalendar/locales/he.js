@@ -1,24 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var he = {
-    code: "he",
-    direction: 'rtl',
-    buttonText: {
-      prev: "הקודם",
-      next: "הבא",
-      today: "היום",
-      month: "חודש",
-      week: "שבוע",
-      day: "יום",
-      list: "סדר יום"
-    },
-    allDayText: "כל היום",
-    moreLinkText: "אחר",
-    noEventsText: "אין אירועים להצגה",
-    weekText: "שבוע"
-  };
-
-  return he;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:40183ca40a7aa3a7f14041ff47e95e6ae485330a1208c9ffc70b185b68bdff41
+size 476

@@ -1,22 +1,3 @@
-define( [
-	"../data/var/dataPriv"
-], function( dataPriv ) {
-
-"use strict";
-
-// Mark scripts as having already been evaluated
-function setGlobalEval( elems, refElements ) {
-	var i = 0,
-		l = elems.length;
-
-	for ( ; i < l; i++ ) {
-		dataPriv.set(
-			elems[ i ],
-			"globalEval",
-			!refElements || dataPriv.get( refElements[ i ], "globalEval" )
-		);
-	}
-}
-
-return setGlobalEval;
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:dcbd29859ebd3cad6cde0fb1c527f50f95fb9f1f888829c5116df34f77b30c8c
+size 381

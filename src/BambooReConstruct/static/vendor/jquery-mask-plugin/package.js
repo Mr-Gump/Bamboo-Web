@@ -1,14 +1,3 @@
-Package.describe({
-  "name": "igorescobar:jquery-mask-plugin",
-  "version": "1.14.16",
-  "summary": "A jQuery Plugin to make masks on form fields and HTML elements.",
-  "git": "git@github.com:igorescobar/jQuery-Mask-Plugin.git",
-  "documentation": "README.md"
-});
-
-Package.onUse(function(api) {
-  api.versionsFrom('1.2.1');
-  api.use('ecmascript');
-  api.addFiles('dist/jquery.mask.js', 'client');
-  api.addFiles('dist/jquery.mask.min.js', 'client');
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1882fe01958400296057d9809ed96db1116fae2961714976eab04eda1162e36
+size 455

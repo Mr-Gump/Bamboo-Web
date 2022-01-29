@@ -1,32 +1,3 @@
-define( [
-	"../ajax"
-], function( jQuery ) {
-
-"use strict";
-
-jQuery._evalUrl = function( url, options, doc ) {
-	return jQuery.ajax( {
-		url: url,
-
-		// Make this explicit, since user can override this through ajaxSetup (#11264)
-		type: "GET",
-		dataType: "script",
-		cache: true,
-		async: false,
-		global: false,
-
-		// Only evaluate the response if it is successful (gh-4126)
-		// dataFilter is not invoked for failure responses, so using it instead
-		// of the default converter is kludgy but it works.
-		converters: {
-			"text script": function() {}
-		},
-		dataFilter: function( response ) {
-			jQuery.globalEval( response, options, doc );
-		}
-	} );
-};
-
-return jQuery._evalUrl;
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:3129bc9627635ec1c22a97eda9389730e6bea1afd1571570301f45742795f687
+size 686

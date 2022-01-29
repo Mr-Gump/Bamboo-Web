@@ -1,32 +1,3 @@
-import simpleHide from "../methods/simple-hide";
-import cssAnimationHide from "./css-animation-hide";
-import slideHide from "../methods/slide-hide";
-
-export default function closeElementWithSpecificEffect(el, config, cssAnimationShowEffect, cssAnimationHideEffect) {
-	if (el.hasClass(config.hiddenClass.slice(1))) return;
-
-	if (el.hasClass(config.cssAnimationClass.slice(1))) {
-		cssAnimationHide(el, config, cssAnimationHideEffect);
-
-		el.on('animationend webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend', function (e) {
-
-
-			if (el.hasClass(cssAnimationHideEffect)) {
-				el.removeClass(cssAnimationHideEffect).addClass(config.hiddenClass.slice(1));
-
-				config.afterClose();
-			}
-			
-			if (el.hasClass(cssAnimationShowEffect)) {
-				config.afterOpen();
-			}
-			
-			e.preventDefault();
-			e.stopPropagation();
-		});
-	} else if (el.hasClass(config.slideEffectClass.slice(1))) {
-		slideHide(el, config, function () {});
-	} else {
-		simpleHide(el, config);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:150921b7643b88ee1b02152df5134ecff98dbaa7ac460d1c9d7c0f9e8b0a6a62
+size 978

@@ -1,14 +1,3 @@
-define( [
-	"../var/rnothtmlwhite"
-], function( rnothtmlwhite ) {
-	"use strict";
-
-	// Strip and collapse whitespace according to HTML spec
-	// https://infra.spec.whatwg.org/#strip-and-collapse-ascii-whitespace
-	function stripAndCollapse( value ) {
-		var tokens = value.match( rnothtmlwhite ) || [];
-		return tokens.join( " " );
-	}
-
-	return stripAndCollapse;
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:861a42de71363b767bfa80320fb54f6439ed36b54048e8a27b05ad4315bf0a73
+size 362

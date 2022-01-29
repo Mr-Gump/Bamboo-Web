@@ -1,30 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var th = {
-    code: "th",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 4  // The week that contains Jan 4th is the first week of the year.
-    },
-    buttonText: {
-      prev: "ก่อนหน้า",
-      next: "ถัดไป",
-      prevYear: 'ปีก่อนหน้า',
-      nextYear: 'ปีถัดไป',
-      year: 'ปี',
-      today: "วันนี้",
-      month: "เดือน",
-      week: "สัปดาห์",
-      day: "วัน",
-      list: "กำหนดการ"
-    },
-    weekText: "สัปดาห์",
-    allDayText: "ตลอดวัน",
-    moreLinkText: "เพิ่มเติม",
-    noEventsText: "ไม่มีกิจกรรมที่จะแสดง"
-  };
-
-  return th;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:c22c7d19512d56522e709853e7418798fd00d9dcfaa31be6113f89338f6a452b
+size 859

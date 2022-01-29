@@ -1,23 +1,3 @@
-/*eslint no-process-exit:0 */
-'use strict';
-
-var gulp = require('gulp');
-var path = require('path');
-
-// combine all the gulp tasks
-require('fs').readdirSync('./gulp').forEach(function(file) {
-  if (path.extname(file) === '.js') {
-    require('./gulp/' + file)(gulp);
-  }
-});
-
-gulp.task('default', function() {
-  console.log('gulp!');
-});
-
-process.on('exit', function() {
-  if (gulp.fail) {
-    // return non-zero exit code
-    process.exit(1);
-  }
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:92cd091d56d7e334e09ebe2c9ca99d3ea81c60570f904241d1583526ab6f8fe2
+size 453

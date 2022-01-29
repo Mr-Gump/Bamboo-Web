@@ -1,29 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var az = {
-    code: "az",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 4  // The week that contains Jan 4th is the first week of the year.
-    },
-    buttonText: {
-      prev: "Əvvəl",
-      next: "Sonra",
-      today: "Bu Gün",
-      month: "Ay",
-      week: "Həftə",
-      day: "Gün",
-      list: "Gündəm"
-    },
-    weekText: "Həftə",
-    allDayText: "Bütün Gün",
-    moreLinkText: function(n) {
-      return "+ daha çox " + n;
-    },
-    noEventsText: "Göstərmək üçün hadisə yoxdur"
-  };
-
-  return az;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ebb9bb07fe72e91c667fb26547c06355e742b4eb303f8065d06fb043896b16f
+size 632

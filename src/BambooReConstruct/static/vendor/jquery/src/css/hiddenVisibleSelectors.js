@@ -1,15 +1,3 @@
-define( [
-	"../core",
-	"../selector"
-], function( jQuery ) {
-
-"use strict";
-
-jQuery.expr.pseudos.hidden = function( elem ) {
-	return !jQuery.expr.pseudos.visible( elem );
-};
-jQuery.expr.pseudos.visible = function( elem ) {
-	return !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
-};
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:38ad950e9bed5e23ed49f9da4436e59daf96be55062f2b9c8e4451bf35728cc2
+size 317

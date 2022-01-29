@@ -1,14 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var enNz = {
-    code: "en-nz",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 4  // The week that contains Jan 4th is the first week of the year.
-    }
-  };
-
-  return enNz;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:1adfc9e559296318a05a532571dc5c24e638f3bf2897537eba177737e520702a
+size 276

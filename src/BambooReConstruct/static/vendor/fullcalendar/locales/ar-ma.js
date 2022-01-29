@@ -1,28 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var arMa = {
-    code: "ar-ma",
-    week: {
-      dow: 6, // Saturday is the first day of the week.
-      doy: 12  // The week that contains Jan 1st is the first week of the year.
-    },
-    direction: 'rtl',
-    buttonText: {
-      prev: "السابق",
-      next: "التالي",
-      today: "اليوم",
-      month: "شهر",
-      week: "أسبوع",
-      day: "يوم",
-      list: "أجندة"
-    },
-    weekText: "أسبوع",
-    allDayText: "اليوم كله",
-    moreLinkText: "أخرى",
-    noEventsText: "أي أحداث لعرض"
-  };
-
-  return arMa;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:ab2f0148b6cfcb67f4f3ef751a795f2f0af6c3f8bb45f6fe0878e778b4bd00a9
+size 645

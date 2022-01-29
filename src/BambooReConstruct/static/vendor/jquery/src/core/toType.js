@@ -1,20 +1,3 @@
-define( [
-	"../var/class2type",
-	"../var/toString"
-], function( class2type, toString ) {
-
-"use strict";
-
-function toType( obj ) {
-	if ( obj == null ) {
-		return obj + "";
-	}
-
-	// Support: Android <=2.3 only (functionish RegExp)
-	return typeof obj === "object" || typeof obj === "function" ?
-		class2type[ toString.call( obj ) ] || "object" :
-		typeof obj;
-}
-
-return toType;
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:1198e692585efd95d1dd477721cbbf5b8e9985864ad727f61f483addc688dbe7
+size 379

@@ -1,24 +1,3 @@
-import { migrateWarnFunc } from "../main.js";
-
-// Support jQuery slim which excludes the ajax module
-if ( jQuery.ajax ) {
-
-var oldAjax = jQuery.ajax;
-
-jQuery.ajax = function( ) {
-	var jQXHR = oldAjax.apply( this, arguments );
-
-	// Be sure we got a jQXHR (e.g., not sync)
-	if ( jQXHR.promise ) {
-		migrateWarnFunc( jQXHR, "success", jQXHR.done,
-			"jQXHR.success is deprecated and removed" );
-		migrateWarnFunc( jQXHR, "error", jQXHR.fail,
-			"jQXHR.error is deprecated and removed" );
-		migrateWarnFunc( jQXHR, "complete", jQXHR.always,
-			"jQXHR.complete is deprecated and removed" );
-	}
-
-	return jQXHR;
-};
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d55949c7c832b879e8058617f6bb9b1c65697113b35f883f62516652ae5771d0
+size 611

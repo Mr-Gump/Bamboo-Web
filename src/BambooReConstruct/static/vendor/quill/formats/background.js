@@ -1,11 +1,3 @@
-import Parchment from 'parchment';
-import { ColorAttributor } from './color';
-
-let BackgroundClass = new Parchment.Attributor.Class('background', 'ql-bg', {
-  scope: Parchment.Scope.INLINE
-});
-let BackgroundStyle = new ColorAttributor('background', 'background-color', {
-  scope: Parchment.Scope.INLINE
-});
-
-export { BackgroundClass, BackgroundStyle };
+version https://git-lfs.github.com/spec/v1
+oid sha256:71f4c8906b5757ec20fa707a832ebd795cef398149de2f9d80d984af4a5be78f
+size 353

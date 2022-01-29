@@ -1,29 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var uk = {
-    code: "uk",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 7  // The week that contains Jan 1st is the first week of the year.
-    },
-    buttonText: {
-      prev: "Попередній",
-      next: "далі",
-      today: "Сьогодні",
-      month: "Місяць",
-      week: "Тиждень",
-      day: "День",
-      list: "Порядок денний"
-    },
-    weekText: "Тиж",
-    allDayText: "Увесь день",
-    moreLinkText: function(n) {
-      return "+ще " + n + "...";
-    },
-    noEventsText: "Немає подій для відображення"
-  };
-
-  return uk;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:2101fdab3e549ffe341e3a848e45f9e26d40e9163e79c0b6d6e046fd5f3a1c0e
+size 723

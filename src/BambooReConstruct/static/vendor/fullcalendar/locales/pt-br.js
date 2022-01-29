@@ -1,25 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var ptBr = {
-    code: "pt-br",
-    buttonText: {
-      prev: "Anterior",
-      next: "Próximo",
-      today: "Hoje",
-      month: "Mês",
-      week: "Semana",
-      day: "Dia",
-      list: "Lista"
-    },
-    weekText: "Sm",
-    allDayText: "dia inteiro",
-    moreLinkText: function(n) {
-      return "mais +" + n;
-    },
-    noEventsText: "Não há eventos para mostrar"
-  };
-
-  return ptBr;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a73b398bd83d9e0206a104b0bde7059130a1e6b889fea03f6b4358a95a3e8ee
+size 467

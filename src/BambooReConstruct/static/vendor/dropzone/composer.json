@@ -1,18 +1,3 @@
-{
-	"name": "enyo/dropzone",
-	"description": "Handles drag and drop of files for you.",
-	"homepage": "http://www.dropzonejs.com",
-	"keywords": [
-		"dragndrop",
-		"drag and drop",
-		"file upload",
-		"upload"
-	],
-	"authors": [{
-		"name": "Matias Meno",
-		"email": "m@tias.me",
-		"homepage": "http://www.matiasmeno.com"
-	}],
-	"license": "MIT",
-	"minimum-stability": "dev"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ba6de88698b77d8621c50ef6fe4def09976591ce00b9c586a6c317205a76988
+size 370

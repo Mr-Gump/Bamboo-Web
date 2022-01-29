@@ -1,16 +1,3 @@
-{
-  "name": "dropzone",
-  "location": "enyo/dropzone",
-  "version": "5.7.2",
-  "description": "Dropzone is an easy to use drag'n'drop library. It supports image previews and shows nice progress bars.",
-  "homepage": "http://www.dropzonejs.com",
-  "main": [
-    "dist/min/dropzone.min.css",
-    "dist/min/dropzone.min.js"
-  ],
-  "ignore": [
-    "*",
-    "!dist",
-    "!dist/**/*"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:082fa3e7aa272edba54020a37218397381d26183a170c7459d2210059326f3bf
+size 384

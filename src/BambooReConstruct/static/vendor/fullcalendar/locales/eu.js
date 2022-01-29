@@ -1,27 +1,3 @@
-FullCalendar.globalLocales.push(function () {
-  'use strict';
-
-  var eu = {
-    code: "eu",
-    week: {
-      dow: 1, // Monday is the first day of the week.
-      doy: 7  // The week that contains Jan 1st is the first week of the year.
-    },
-    buttonText: {
-      prev: "Aur",
-      next: "Hur",
-      today: "Gaur",
-      month: "Hilabetea",
-      week: "Astea",
-      day: "Eguna",
-      list: "Agenda"
-    },
-    weekText: "As",
-    allDayText: "Egun osoa",
-    moreLinkText: "gehiago",
-    noEventsText: "Ez dago ekitaldirik erakusteko"
-  };
-
-  return eu;
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:50a6d7ab1385533b6176f189923a053c25d1a04a212a69d4034839e1e6f172bf
+size 571
